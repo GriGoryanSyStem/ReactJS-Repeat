@@ -1,14 +1,11 @@
 .appWrapper {
     background: rebeccapurple;
-     display: grid;
+    display: grid;
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
-    grid-template-areas:
-"headerArea headerArea headerArea"
-"navArea contentArea contentArea"
-;
- }
+    grid-gap: 5px;
+    grid-template-areas: "headerArea headerArea headerArea" "navArea contentArea contentArea";
+}
 
 .header {
     grid-area: headerArea;
@@ -16,7 +13,7 @@
 }
 
 .nav {
-grid-area: navArea;
+    grid-area: navArea;
     background: yellow;
 }
 
@@ -25,6 +22,12 @@ grid-area: navArea;
     background: aqua;
 }
 
-.pic{
+.pic {
     width: 50px;
+}
+
+.back {
+    background-size: cover;
+    position: relative;
+    width: 100%;
 }
