@@ -1,18 +1,15 @@
 import React from "react";
-import back from "../pictures/background.jpg";
-import '../App.css'
+import c from './Profile.module.css'
 
 const Profile = () => {
+    console.log(c);
     return (
         <div>
-            <div className="content">
-                <div>
-                    <img src={back} alt="" className='back'/>
-                </div>
-                <div>
+            <div className={c.content} >
+                <div className={c.item}>
                     Users
                 </div>
-                <div>
+                <div className={c.item}>
                     Friends
                 </div>
             </div>

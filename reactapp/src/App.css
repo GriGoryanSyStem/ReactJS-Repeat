@@ -1,5 +1,4 @@
 .appWrapper {
-    background: rebeccapurple;
     display: grid;
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
@@ -7,27 +6,8 @@
     grid-template-areas: "headerArea headerArea headerArea" "navArea contentArea contentArea";
 }
 
-.header {
-    grid-area: headerArea;
-    background: darkred;
+#root{
+    min-height:500px;
 }
 
-.nav {
-    grid-area: navArea;
-    background: yellow;
-}
 
-.content {
-    grid-area: contentArea;
-    background: aqua;
-}
-
-.pic {
-    width: 50px;
-}
-
-.back {
-    background-size: cover;
-    position: relative;
-    width: 100%;
-}
