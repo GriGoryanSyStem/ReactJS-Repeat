@@ -3,11 +3,11 @@
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 5px;
-    grid-template-areas: "headerArea headerArea headerArea" "navArea contentArea contentArea";
+    grid-template-areas:
+            "headerArea headerArea headerArea"
+            "navArea contentArea contentArea"
+            "footerArea footerArea footerArea";
 }
-
-#root{
-    min-height:500px;
+#root {
+    min-height: 500px;
 }
-
-

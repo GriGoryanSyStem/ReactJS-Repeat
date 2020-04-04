@@ -1,10 +1,7 @@
 .nav {
     grid-area: navArea;
-    background: #3cc4fa;
+    background: #32b6f6;
     height: 100%;
-}
-.item{
-
 }
 .item a{
    text-decoration: none;

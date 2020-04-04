@@ -1,6 +1,6 @@
 .header {
     grid-area: headerArea;
-    background: #1186ea;
+    background: #0c7fcd;
     display: flex;
     justify-content: flex-start;
     align-items: center;

@@ -1,7 +1,6 @@
 import React from "react";
 import c from "./NavBar.module.css"
 
-
 const NavBar =() =>{
     return (
         <div>
