@@ -2,11 +2,15 @@
     grid-area: navArea;
     background: #32b6f6;
     height: 100%;
+    padding: 10px;
 }
-.item a{
-   text-decoration: none;
+
+.item a {
+    text-decoration: none;
     color: #120046;
 }
-.active a{
-    color: #374eff;
+
+/*!!!!!!!!!  important   .item .selected*/
+.item .selected {
+    color: #ffffff;
 }

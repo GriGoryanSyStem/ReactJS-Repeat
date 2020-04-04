@@ -1,3 +1,9 @@
 .dialog{
     color: #120046;
+    background-image: url("../../pictures/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 10px;
 }
