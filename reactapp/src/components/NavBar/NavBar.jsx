@@ -3,7 +3,6 @@ import c from "./NavBar.module.css"
 
 
 const NavBar =() =>{
-    console.log(c);
     return (
         <div>
             <nav className={c.nav}>

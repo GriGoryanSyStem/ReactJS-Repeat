@@ -3,7 +3,6 @@ import c from './Profile.module.css'
 import MyPosts from "./MyPost/MyPosts";
 
 const Profile = () => {
-    console.log(c);
     return (
         <div>
             <div className={c.content} >

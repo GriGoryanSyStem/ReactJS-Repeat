@@ -4,10 +4,11 @@ import  c from "./Header.module.css"
 
 
 const Header = () =>{
-    console.log(c);
     return(
             <header className={c.header}>
+
                 <img src={pic} alt="pic" className={c.pic}/>
+                <h2>React JS 2020</h2>
             </header>
     )
 };
