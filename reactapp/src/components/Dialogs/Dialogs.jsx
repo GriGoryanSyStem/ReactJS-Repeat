@@ -1,9 +1,9 @@
 import React from "react";
 import c from "./Dialogs.module.css"
 
-const Dialogs = (props) =>{
+const Dialogs = () =>{
     return (
-        <div className={c.dialogs}>
+        <div className={c.dialog}>
             Dialogs
         </div>
     )
