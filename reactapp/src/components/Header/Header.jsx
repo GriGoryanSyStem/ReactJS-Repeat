@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../pictures/logo.svg";
+import pic from "../../pictures/logo.svg";
 import  c from "./Header.module.css"
 
 
