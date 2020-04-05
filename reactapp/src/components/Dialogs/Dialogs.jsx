@@ -1,23 +1,7 @@
 import React from "react";
 import c from "./Dialogs.module.css"
-import {NavLink} from "react-router-dom";
-
-const DialogItem = (props) => {
-    return (
-        <div>
-            <div className={c.dialog}>
-                <NavLink to={`/dialogs/${props.id}`} activeClassName={c.selected}>{props.name}</NavLink>
-            </div>
-        </div>
-    )
-};
-const Massage = (props) => {
-    return (
-        <div>
-            <div className={c.massage}>{props.massage}</div>
-        </div>
-    )
-};
+import DialogItem from "./DialogItem/DialogItems";
+import Massage from "./Massage/Massage";
 
 const Dialogs = () => {
     let dialogsData = [
@@ -36,17 +20,17 @@ const Dialogs = () => {
         <div className={c.dialogs}>
             <div className={c.dialogsItem}>
                 {dialogsData.map((i, k) => {
-                        return (
-                            <DialogItem name={i.name} id={i.id} key={k}/>
-                        )
-                    })}
+                    return (
+                        <DialogItem name={i.name} id={i.id} key={k}/>
+                    )
+                })}
             </div>
             <div className={c.massagesItem}>
                 {massagesData.map((i, k) => {
-                        return (
-                            <Massage massage={i.massage} id={i.id} key={k}/>
-                        )
-                    })}
+                    return (
+                        <Massage massage={i.massage} id={i.id} key={k}/>
+                    )
+                })}
             </div>
         </div>
     )
