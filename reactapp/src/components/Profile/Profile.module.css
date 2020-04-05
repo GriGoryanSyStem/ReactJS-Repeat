@@ -1,4 +1,4 @@
-
+/*--------------------------Profile-------------------------*/
 .back {
     background-size: cover;
     position: relative;
@@ -13,7 +13,32 @@
     height: 100%;
     padding: 10px;
     margin-left: 5px;
+    border-radius: 2px;
  }
 .item{
     color: white;
+}
+/*--------------------------MyPosts-------------------------*/
+.myPostCont{
+    background: #b3e6ff;
+    color: rgba(54, 54, 54, 0.79);
+    padding: 5px;
+}
+.addPostBtn{
+    margin: 5px;
+}
+/*--------------------------Post-------------------------*/
+.post img {
+    width: 40px;
+}
+.post {
+    display: flex;
+    align-items: center;
+}
+/*--------------------------ProfileInfo-------------------------*/
+.profileInfo{
+    background: #0f7fcd;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
 }

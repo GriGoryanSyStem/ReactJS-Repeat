@@ -3,8 +3,8 @@
     background: #32b6f6;
     height: 100%;
     padding: 10px;
+    border-radius: 2px;
 }
-
 .item a {
     text-decoration: none;
     color: #120046;
@@ -13,4 +13,8 @@
 /*!!!!!!!!!  important   .item .selected*/
 .item .selected {
     color: #ffffff;
+    font-weight: 600;
+}
+.profileCont, .dialogsCont, .newsCont, .usersCont, .settingCont{
+    color: #120046;
 }

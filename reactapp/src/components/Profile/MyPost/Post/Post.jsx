@@ -1,5 +1,5 @@
 import React from "react";
-import c from './Post.module.css'
+import c from '../../Profile.module.css'
 import pic from "../../../../pictures/person-icon-8.png"
 
 const MyPosts = (props) => {

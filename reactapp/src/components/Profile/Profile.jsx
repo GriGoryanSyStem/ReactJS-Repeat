@@ -1,17 +1,13 @@
 import React from "react";
 import c from './Profile.module.css'
 import MyPosts from "./MyPost/MyPosts";
+import ProfileInfo from "./PofileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
         <div>
             <div className={c.content} >
-                <div className={c.item}>
-                    ava + description
-                </div>
-                <div className={c.item}>
-                    Friends
-                </div>
+                <ProfileInfo/>
                 <MyPosts/>
             </div>
         </div>
