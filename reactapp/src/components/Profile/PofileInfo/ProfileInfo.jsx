@@ -1,10 +1,10 @@
 import React from "react";
 import c from "../Profile.module.css";
 
-const ProfileInfo =() => {
+const ProfileInfo = () => {
     return (
         <div className={c.profileInfo}>
-           <h1>Profile Information</h1>
+            <h1>Profile Information</h1>
 
             <div className={c.item}>
                 ava + description

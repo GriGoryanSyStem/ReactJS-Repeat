@@ -9,7 +9,7 @@ const MyPosts = (props) => {
                 <img src={pic} alt=""/>
                 <span>{props.massage}</span>
             </div>
-            <div>Like</div>
+            <div>{`${props.id}. Like ${props.likes}`}</div>
         </div>
     )
 };
