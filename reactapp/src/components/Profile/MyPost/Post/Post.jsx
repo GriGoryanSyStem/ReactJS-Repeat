@@ -3,8 +3,6 @@ import c from './Post.module.css'
 import pic from "../../../../pictures/person-icon-8.png"
 
 const MyPosts = (props) => {
-    console.log(props);
-    console.log(props.massage);
     return (
         <div>
             <div className={c.post}>

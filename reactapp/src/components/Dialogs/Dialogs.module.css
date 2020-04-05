@@ -1,4 +1,6 @@
-.dialog{
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
     color: #120046;
     background-image: url("../../pictures/background.jpg");
     background-position: center;
@@ -6,4 +8,20 @@
     background-size: cover;
     height: 100%;
     padding: 10px;
+    margin-left: 5px;
+}
+.dialogsItem{
+padding-left: 2px;
+}
+.dialog{
+    padding-left: 2px;
+}
+.dialogsItem .active{
+    color: gold;
+}
+.massage{
+
+}
+.massagesItem{
+
 }
