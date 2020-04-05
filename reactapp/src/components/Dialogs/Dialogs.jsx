@@ -8,14 +8,14 @@ const Dialogs = (props) => {
     return (
         <div className={c.dialogs}>
             <div className={c.dialogsItem}>
-                {props.dialogsData.map((i, k) => {
+                {props.dialogPage.dialogsData.map((i, k) => {
                     return (
                         <DialogItem name={i.name} id={i.id} key={k}/>
                     )
                 })}
             </div>
             <div className={c.massagesItem}>
-                {props.massagesData.map((i, k) => {
+                {props.dialogPage.massagesData.map((i, k) => {
                     return (
                         <Massage massage={i.massage} id={i.id} key={k}/>
                     )
