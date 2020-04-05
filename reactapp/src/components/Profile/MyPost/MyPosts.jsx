@@ -15,9 +15,11 @@ const MyPosts = () => {
             <div className={c.addPostBtn}>
                 <button>AddPost</button>
             </div>
-            <Post id={postData[0].id} massage={postData[0].massage} likes={postData[0].likes}/>
-            <Post id={postData[1].id} massage={postData[1].massage} likes={postData[1].likes}/>
-            <Post id={postData[2].id} massage={postData[2].massage} likes={postData[2].likes}/>
+            {postData.map((i, k) => {
+                return (
+                    <Post id={i.id} massage={i.massage} likes={i.likes} key={k}/>
+                )
+            })}
         </div>
     )
 };

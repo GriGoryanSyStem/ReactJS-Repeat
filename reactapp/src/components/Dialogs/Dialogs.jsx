@@ -35,16 +35,18 @@ const Dialogs = () => {
     return (
         <div className={c.dialogs}>
             <div className={c.dialogsItem}>
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-                <DialogItem name={dialogsData[2].name} id={dialogsData[2].id}/>
-                <DialogItem name={dialogsData[3].name} id={dialogsData[3].id}/>
-                <DialogItem name={dialogsData[4].name} id={dialogsData[4].id}/>
+                {dialogsData.map((i, k) => {
+                        return (
+                            <DialogItem name={i.name} id={i.id} key={k}/>
+                        )
+                    })}
             </div>
             <div className={c.massagesItem}>
-                <Massage massage={massagesData[0].massage} id={massagesData[0].id}/>
-                <Massage massage={massagesData[1].massage} id={massagesData[1].id}/>
-                <Massage massage={massagesData[2].massage} id={massagesData[2].id}/>
+                {massagesData.map((i, k) => {
+                        return (
+                            <Massage massage={i.massage} id={i.id} key={k}/>
+                        )
+                    })}
             </div>
         </div>
     )

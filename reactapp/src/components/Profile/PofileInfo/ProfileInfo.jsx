@@ -5,7 +5,6 @@ const ProfileInfo = () => {
     return (
         <div className={c.profileInfo}>
             <h1>Profile Information</h1>
-
             <div className={c.item}>
                 ava + description
             </div>
