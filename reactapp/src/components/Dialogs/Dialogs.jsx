@@ -4,7 +4,6 @@ import DialogItem from "./DialogItem/DialogItems";
 import Massage from "./Massage/Massage";
 
 const Dialogs = (props) => {
-
     return (
         <div className={c.dialogs}>
             <div className={c.dialogsItem}>

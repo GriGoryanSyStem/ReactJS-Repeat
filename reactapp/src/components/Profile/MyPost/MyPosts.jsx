@@ -3,13 +3,18 @@ import Post from "./Post/Post";
 import c from "../Profile.module.css";
 
 const MyPosts = (props) => {
+    let newPostElement = React.createRef();
 
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    };
     return (
         <div className={c.myPostCont}>
             <h2>My Posts</h2>
-            <textarea name="text" cols="20" rows="5"/>
+            <textarea ref={newPostElement} name="text" cols="20" rows="5"/>
             <div className={c.addPostBtn}>
-                <button>AddPost</button>
+                <button onClick={addPost}>AddPost</button>
             </div>
             {props.postData.map((i, k) => {
                 return (
