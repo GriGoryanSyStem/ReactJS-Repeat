@@ -13,7 +13,8 @@ const App = (props) => {
         <div className="appWrapper">
             <Header/>
             <NavBar/>
-            <Route render={() => <Profile profilePage={props.state.profilePage}/>} path="/profile"/>
+            <Route render={() => <Profile  profilePage={props.state.profilePage} addPost={props.addPost}/>}
+                   path="/profile"/>
             <Route render={() => <Dialogs dialogPage={props.state.dialogPage}/>}
                    path="/dialogs"/>
             <Route component={Friend} path="/friends"/>
