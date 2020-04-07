@@ -1,4 +1,3 @@
-import React from "react";
 
 let state = {
     profilePage: {
@@ -35,5 +34,8 @@ export let addPost = () => {
 export let updateTextTextArea = (newText) => {
     state.profilePage.textTextArea = newText;
 };
+// export let subscriber = (observer) => {
+//     reRenderMe = observer;
+// };
 
 export default state;
