@@ -6,7 +6,8 @@ let state = {
             {id: 1, massage: 'First massage', likes: 7},
             {id: 2, massage: 'Hi, how are you', likes: 5},
             {id: 3, massage: 'My name is Props', likes: 21},
-        ]
+        ],
+        textTextArea: 'write new post text'
     },
     dialogPage: {
         dialogsData: [
@@ -23,14 +24,16 @@ let state = {
         ]
     }
 };
-export let addPost = (pastMassage) =>{
-    debugger
+export let addPost = () => {
     let newPost = {
-        id:6,
-        massage:pastMassage,
-        likeCount:5
+        id: 6,
+        massage: state.profilePage.textTextArea,
+        likes: 5
     };
     state.profilePage.postData.push(newPost);
+};
+export let updateTextTextArea = (newText) => {
+    state.profilePage.textTextArea = newText;
 };
 
 export default state;
