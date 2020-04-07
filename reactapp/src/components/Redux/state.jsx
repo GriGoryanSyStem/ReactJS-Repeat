@@ -1,4 +1,3 @@
-
 let state = {
     profilePage: {
         postData: [
@@ -23,6 +22,9 @@ let state = {
         ]
     }
 };
+
+window.state = state;
+
 export let addPost = () => {
     let newPost = {
         id: 6,
