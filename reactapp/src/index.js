@@ -10,8 +10,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <App state={store.getState()}
-                 addPost={store.addPost.bind(store)}
-                 updateTextTextArea = {store.updateTextTextArea.bind(store)}/>
+                 dispatch={store.dispatch.bind(store)}/>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')

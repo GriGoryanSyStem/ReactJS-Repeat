@@ -27,19 +27,24 @@ let store = {
         return this._state;
     },
     addPost() {
-        let newPost = {
-            id: 6,
-            massage: this._state.profilePage.textTextArea,
-            likes: 5
-        };
-        this._state.profilePage.postData.push(newPost);
+
     },
-    updateTextTextArea(newText) {
-        this._state.profilePage.textTextArea = newText;
+    updateTextTextArea() {
+
     },
-    // export let subscriber = (observer) => {
-//     reRenderMe = observer;
-// };
+
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
+            let newPost = {
+                id: 6,
+                massage: this._state.profilePage.textTextArea,
+                likes: 5
+            };
+            this._state.profilePage.postData.push(newPost);
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this._state.profilePage.textTextArea = action.newText;
+        }
+    }
 };
 window.store = store;
 export default store;
