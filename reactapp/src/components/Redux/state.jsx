@@ -26,12 +26,6 @@ let store = {
     getState() {
         return this._state;
     },
-    addPost() {
-
-    },
-    updateTextTextArea() {
-
-    },
 
     dispatch(action) {
         if (action.type === "ADD-POST") {

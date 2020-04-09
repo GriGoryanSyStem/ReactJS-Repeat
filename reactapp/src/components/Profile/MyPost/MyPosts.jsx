@@ -2,19 +2,26 @@ import React from "react";
 import Post from "./Post/Post";
 import c from "../Profile.module.css";
 
-function MyPosts(props) {
+const updateNewPostTextAC = (newText) => {
+    return {
+        type: 'UPDATE-NEW-POST-TEXT',
+        newText: newText,
+    }
+};
 
-    let addPostRef = () => {
-        props.dispatch({type: "ADD-POST"});
-    };
+const addPostAC = () => {
+    return {type:'ADD-POST'}
+};
+
+const MyPosts = (props) => {
 
     let onPostChange = (e) => {
-        props.dispatch({
-            type: "UPDATE-NEW-POST-TEXT",
-            newText: e.target.value
-        });
+        props.dispatch(updateNewPostTextAC(e.target.value));
     };
 
+    let addPostRef = () => {
+        props.dispatch(addPostAC())
+    };
     return (
         <div className={c.myPostCont}>
             <h2>My Posts</h2>
@@ -29,6 +36,6 @@ function MyPosts(props) {
             })}
         </div>
     )
-}
+};
 
 export default MyPosts;
