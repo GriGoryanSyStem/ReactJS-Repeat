@@ -20,7 +20,8 @@ let store = {
                 {id: 1, massage: 'Hi'},
                 {id: 2, massage: 'How are you'},
                 {id: 3, massage: 'React'},
-            ]
+            ],
+            newMessageTextArea: '',
         },
     },
     getState() {
@@ -28,17 +29,31 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === "ADD-POST") {
-            let newPost = {
-                id: 6,
-                massage: this._state.profilePage.textTextArea,
-                likes: 5
-            };
-            this._state.profilePage.postData.push(newPost);
-        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
-            this._state.profilePage.textTextArea = action.newText;
+        switch (action.type) {
+            case "ADD_POST":
+                this._state.profilePage.postData.push({
+                    id: 6,
+                    massage: this._state.profilePage.textTextArea,
+                    likes: 5
+                });
+                break;
+            case "UPDATE_NEW_POST_TEXT":
+                this._state.profilePage.textTextArea = action.newText;
+                break;
+            case "ADD_NEW_MASSAGE_TEXT":
+                this._state.dialogPage.newMessageTextArea = action.massage;
+                break;
+            case "SEND_MASSAGE":
+                this._state.dialogPage.massagesData.push({
+                    id: 4,
+                    massage: this._state.dialogPage.newMessageTextArea,
+                });
+                break;
         }
     }
 };
+
+//refactori jamanak sax AC tarel em amen meky iranc fali vra , avel cod er
+
 window.store = store;
 export default store;

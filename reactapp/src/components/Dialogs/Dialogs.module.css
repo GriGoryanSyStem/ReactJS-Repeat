@@ -1,6 +1,6 @@
 .dialogs{
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 3fr 3fr 6fr;
     color: #120046;
     background-image: url("../../pictures/background.jpg");
     background-position: center;
@@ -11,7 +11,7 @@
     margin-left: 5px;
 }
 .dialogsItem{
-padding-left: 2px;
+padding-left: 12px;
 }
 .dialog{
     padding-left: 2px;
@@ -32,4 +32,7 @@ padding-left: 2px;
 }
 .massagesItem{
 
+}
+.textAreaButton{
+    padding-left: 5px;
 }
