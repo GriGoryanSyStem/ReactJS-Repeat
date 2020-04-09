@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state, {addPost,updateTextTextArea} from "./components/Redux/state";
+import store from "./components/Redux/state";
 import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App state={state} addPost={addPost} updateTextTextArea = {updateTextTextArea}/>
+            <App state={store.getState()}
+                 addPost={store.addPost.bind(store)}
+                 updateTextTextArea = {store.updateTextTextArea.bind(store)}/>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
