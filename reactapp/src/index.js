@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import store from "./components/Redux/state";
+import store from "./components/Redux/redux-store";
 import {BrowserRouter} from "react-router-dom";
 
 let restartRender = () => {
@@ -16,7 +16,7 @@ let restartRender = () => {
         </React.StrictMode>,
         document.getElementById('root')
     );
-
 };
+
 restartRender();
 serviceWorker.unregister();

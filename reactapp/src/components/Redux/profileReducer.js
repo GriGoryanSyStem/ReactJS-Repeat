@@ -1,4 +1,13 @@
-const profileReducer = (state, action) => {
+let initialState = {
+    postData: [
+        {id: 1, massage: 'First massage', likes: 7},
+        {id: 2, massage: 'Hi, how are you', likes: 5},
+        {id: 3, massage: 'My name is Props', likes: 21},
+    ],
+    textTextArea: ''
+};
+
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_POST":
             state.postData.push({
