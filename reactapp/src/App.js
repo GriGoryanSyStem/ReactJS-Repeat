@@ -8,13 +8,14 @@ import {Route} from "react-router-dom";
 import Friend from "./components/Friends/Friends";
 import Settings from "./components/Settings/Settings";
 
-const App = (props) => {
+
+function App(props) {
     return (
         <div className="appWrapper">
             <Header/>
             <NavBar/>
-            <Route render={() => <Profile  profilePage={props.state.profilePage}
-                                           dispatch={props.dispatch}/>}
+            <Route render={() => <Profile profilePage={props.state.profilePage}
+                                          dispatch={props.dispatch}/>}
                    path="/profile"/>
             <Route render={() => <Dialogs dialogPage={props.state.dialogPage} dispatch={props.dispatch}/>}
                    path="/dialogs"/>
@@ -22,5 +23,6 @@ const App = (props) => {
             <Route component={Settings} path="/settings"/>
         </div>
     );
-};
+}
+
 export default App;

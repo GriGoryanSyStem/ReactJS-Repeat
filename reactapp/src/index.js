@@ -6,14 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import store from "./components/Redux/state";
 import {BrowserRouter} from "react-router-dom";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App state={store.getState()}
-                 dispatch={store.dispatch.bind(store)}/>
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+let restartRender = () => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <BrowserRouter>
+                <App state={store.getState()}
+                     dispatch={store.dispatch.bind(store)}/>
+            </BrowserRouter>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
 
+};
+restartRender();
 serviceWorker.unregister();

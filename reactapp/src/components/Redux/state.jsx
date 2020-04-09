@@ -1,3 +1,6 @@
+import profileReducer from "./profileReducer";
+import dialogReducer from "./dialogReducer";
+
 let store = {
     _state: {
         profilePage: {
@@ -6,7 +9,7 @@ let store = {
                 {id: 2, massage: 'Hi, how are you', likes: 5},
                 {id: 3, massage: 'My name is Props', likes: 21},
             ],
-            textTextArea: 'write new post text'
+            textTextArea: ''
         },
         dialogPage: {
             dialogsData: [
@@ -29,31 +32,12 @@ let store = {
     },
 
     dispatch(action) {
-        switch (action.type) {
-            case "ADD_POST":
-                this._state.profilePage.postData.push({
-                    id: 6,
-                    massage: this._state.profilePage.textTextArea,
-                    likes: 5
-                });
-                break;
-            case "UPDATE_NEW_POST_TEXT":
-                this._state.profilePage.textTextArea = action.newText;
-                break;
-            case "ADD_NEW_MASSAGE_TEXT":
-                this._state.dialogPage.newMessageTextArea = action.massage;
-                break;
-            case "SEND_MASSAGE":
-                this._state.dialogPage.massagesData.push({
-                    id: 4,
-                    massage: this._state.dialogPage.newMessageTextArea,
-                });
-                break;
-        }
+        profileReducer(this._state.profilePage,action);
+        dialogReducer(this._state.dialogPage,action);
     }
 };
 
-//refactori jamanak sax AC tarel em amen meky iranc fali vra , avel cod er
+/*refactori jamanak sax AC tarel em amen meky iranc fali vra , avel cod er*/
 
 window.store = store;
 export default store;
