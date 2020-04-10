@@ -8,8 +8,7 @@ import Friend from "./components/Friends/Friends";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
-
-function App(props) {
+const  App = (props) => {
     return (
         <div className="appWrapper">
             <Header/>
