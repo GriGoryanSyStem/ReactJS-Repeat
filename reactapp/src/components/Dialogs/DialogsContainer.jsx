@@ -1,29 +1,27 @@
 import React from "react";
 import Dialogs from "./Dialogs";
+import {connect} from "react-redux";
 
-class DialogsContainer extends React.Component {
-    render() {
-        let changeMassageText = (param_e) => {
-            this.props.dispatch({
+let mapStateToProps = (state) => {
+    return {
+        dialogPage: state.dialogPageR
+    }
+};
+let mapDispatchToProps = (dispatch) => {
+    return {
+        changeMassageText: (param_e) => {
+            dispatch({
                 type: 'ADD_NEW_MASSAGE_TEXT',
                 massage: param_e
-            });
-            this.forceUpdate();  // class component that could call forceUpdate();
-        };
-        let sendMassage = () => {
-            this.props.dispatch({
+            })
+        },
+        sendMassage: () => {
+            dispatch({
                 type: 'SEND_MASSAGE',
-            });
-            this.forceUpdate(); // class component that could call forceUpdate();
-        };
-        return (
-            <Dialogs changeMassageText = {changeMassageText}
-                     sendMassage = {sendMassage}
-                     dialogsData = {this.props.dialogPage.dialogsData}
-                     massagesData={this.props.dialogPage.massagesData}
-                     newMessageTextArea = {this.props.dialogPage.newMessageTextArea}/>
-        )
+            })
+        }
     }
-}
+};
 
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 export default DialogsContainer;

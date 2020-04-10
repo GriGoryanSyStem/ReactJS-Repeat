@@ -13,16 +13,14 @@ const  App = (props) => {
         <div className="appWrapper">
             <Header/>
             <NavBar/>
-            <Route render={() => <Profile profilePage={props.state.profilePageR}
-                                          dispatch={props.dispatch}/>}
+            <Route render={() => <Profile/>}
                    path="/profile"/>
-            <Route render={() => <DialogsContainer dialogPage={props.state.dialogPageR}
-                                          dispatch={props.dispatch}/>}
+            <Route render={() => <DialogsContainer/>}
                    path="/dialogs"/>
             <Route component={Friend} path="/friends"/>
             <Route component={Settings} path="/settings"/>
         </div>
     );
-}
+};
 
 export default App;
