@@ -22,7 +22,7 @@ const dialogReducer = (state = initialState, action) => {
         case "SEND_MASSAGE":
             state.massagesData.push({
                 id: 4,
-                massage: {...state.newMessageTextArea},
+                massage: state.newMessageTextArea,
             });
             state.newMessageTextArea = '';
             return {...state};
