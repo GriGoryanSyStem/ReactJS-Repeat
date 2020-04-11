@@ -16,12 +16,9 @@ let mapDispatchToProps = (dispatch) => {
             })
         },
         sendMassage: () => {
-            dispatch({
-                type: 'SEND_MASSAGE',
-            })
+            dispatch( {type: 'SEND_MASSAGE'} )
         }
     }
 };
-
 const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 export default DialogsContainer;

@@ -2,7 +2,7 @@ import React from "react";
 import c from '../../Profile.module.css'
 import pic from "../../../../pictures/person-icon-8.png"
 
-const MyPosts = (props) => {
+const Posts = (props) => {
     return (
         <div>
             <div className={c.post}>
@@ -13,4 +13,4 @@ const MyPosts = (props) => {
         </div>
     )
 };
-export default MyPosts;
+export default Posts;

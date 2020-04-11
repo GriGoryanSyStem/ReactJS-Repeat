@@ -9,19 +9,16 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_POST":
-            let copyState = {...state};
-            copyState.postData = [...state.postData];
-            copyState.postData.push({
-                id: 6,
-                massage: state.textTextArea,
-                likes: 5
-            });
-            copyState.textTextArea = '';
-            return {...copyState};
+            return  {
+                ...state,
+                postData:[...state.postData,{id: 6,massage: state.textTextArea,likes:5}],
+                textTextArea:""
+            };
         case "UPDATE_NEW_POST_TEXT":
-            let copyState2 = {...state};
-            copyState2.textTextArea = action.newText;
-            return {...copyState2};
+            return {
+                ...state,
+                textTextArea:action.newText
+            };
         default:
             return state;
     }
