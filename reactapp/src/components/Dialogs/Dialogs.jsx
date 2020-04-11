@@ -10,7 +10,6 @@ const Dialogs = (props) => {
     let onSendMassage = () => {
         props.sendMassage();
     };
-
     return (
         <div className={c.dialogs}>
             <div className={c.textAreaButton}>
