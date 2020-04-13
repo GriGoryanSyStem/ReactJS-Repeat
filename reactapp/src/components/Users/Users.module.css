@@ -1,0 +1,28 @@
+.usersContainer{
+    grid-area: contentArea;
+    background-image: url("../../pictures/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 2px;
+}
+.usersContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.userItem{
+    width: 150px;
+    border: 1px solid silver;
+    overflow: hidden;
+    margin: 3px;
+}
+.userItemImage img{
+    width: 100%;
+}
+.userItemImage .button{
+   cursor: pointer;
+}

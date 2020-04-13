@@ -1,8 +1,8 @@
 let initialState = {
     postData: [
-        {id: 1, massage: 'First massage', likes: 7},
-        {id: 2, massage: 'Hi, how are you', likes: 5},
-        {id: 3, massage: 'My name is Props', likes: 21},
+        {id: 1, massage: 'Hi, my first text', likes: 17},
+        {id: 2, massage: 'Hi, how are you', likes: 4},
+        {id: 3, massage: 'My name is Props', likes: 90},
     ],
     textTextArea: ''
 };

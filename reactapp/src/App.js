@@ -7,8 +7,9 @@ import {Route} from "react-router-dom";
 import Friend from "./components/Friends/Friends";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
-const  App = (props) => {
+const App = (props) => {
     return (
         <div className="appWrapper">
             <Header/>
@@ -17,6 +18,7 @@ const  App = (props) => {
                    path="/profile"/>
             <Route render={() => <DialogsContainer/>}
                    path="/dialogs"/>
+            <Route render={() => <UsersContainer/>} path="/users"/>
             <Route component={Friend} path="/friends"/>
             <Route component={Settings} path="/settings"/>
         </div>
