@@ -11,18 +11,26 @@
 }
 .usersContainer{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 .userItem{
-    width: 150px;
+    width: 180px;
     border: 1px solid silver;
     overflow: hidden;
     margin: 3px;
+    height: 150px;
 }
 .userItemImage img{
-    width: 100%;
+    width: 70px;
 }
 .userItemImage .button{
    cursor: pointer;
+}
+.imageButton{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: flex-start;
 }

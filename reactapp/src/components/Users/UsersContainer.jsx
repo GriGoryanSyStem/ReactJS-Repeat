@@ -16,6 +16,13 @@ let mapDispatchToProps = (dispatch) => {
                     isFollowed: isFollowed
                 });
         },
+        setUsers: (apiResponseResult) => {
+            dispatch(
+                {
+                    type: "SET-USERS",
+                    users:apiResponseResult,
+                });
+        },
     }
 };
 
