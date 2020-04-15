@@ -3,9 +3,13 @@ import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
     return {
-        usersReducer: state.usersPageR
+        usersReducer: state.usersPageR,
+        pageSize: state.usersPageR.pageSize,
+        totalUsersCount: state.usersPageR.totalUsersCount,
+        currentPage: state.usersPageR.currentPage,
     }
 };
+
 let mapDispatchToProps = (dispatch) => {
     return {
         followFunc: (isFollowed, userId) => {
@@ -16,13 +20,21 @@ let mapDispatchToProps = (dispatch) => {
                     isFollowed: isFollowed
                 });
         },
-        setUsers: (apiResponseResult) => {
+        setUsers: (apiResponseResult,apiTotalUsersCount) => {
             dispatch(
                 {
                     type: "SET-USERS",
-                    users:apiResponseResult,
+                    users: apiResponseResult,
+                    total: apiTotalUsersCount,
                 });
         },
+        clickPage: (page) => {
+            dispatch(
+                {
+                    type: "SELECTED-PAGE",
+                    page: page,
+                });
+        }
     }
 };
 
