@@ -14,6 +14,7 @@ let initialState = {
     pageSize:20,
     totalUsersCount:0,
     currentPage:1,
+    isLoading:null,
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -39,6 +40,11 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentPage: action.page,
+            };
+            case "IS-LOADING":
+            return {
+                ...state,
+                isLoading: action.isLoading,
             };
         default:
             return state;

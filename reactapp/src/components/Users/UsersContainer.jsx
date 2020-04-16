@@ -5,16 +5,20 @@ import Users from "./Users";
 
 class UsersApi extends React.Component {
     componentDidMount() {
+        this.props.isLoadingFunc(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
             .then(response => {
+                this.props.isLoadingFunc(false);
                 return this.props.setUsers(response.data.items, response.data.totalCount);
             });
     }
 
     clickButton = (pagNumber) => {
+        this.props.isLoadingFunc(true);
         this.props.clickPage(pagNumber);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pagNumber}&count=${this.props.pageSize}`)
             .then(response => {
+                this.props.isLoadingFunc(false);
                 return this.props.setUsers(response.data.items, response.data.totalCount);
             });
     };
@@ -26,7 +30,8 @@ class UsersApi extends React.Component {
                    totalUsersCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
                    usersReducer={this.props.usersReducer}
-                   currentPage={this.props.currentPage}/>
+                   currentPage={this.props.currentPage}
+                   isLoading={this.props.isLoading}/>
         )
     }
 }
@@ -37,6 +42,7 @@ let mapStateToProps = (state) => {
         pageSize: state.usersPageR.pageSize,
         totalUsersCount: state.usersPageR.totalUsersCount,
         currentPage: state.usersPageR.currentPage,
+        isLoading: state.usersPageR.isLoading,
     }
 };
 
@@ -63,6 +69,13 @@ let mapDispatchToProps = (dispatch) => {
                 {
                     type: "SELECTED-PAGE",
                     page: page,
+                });
+        },
+        isLoadingFunc: (val) => {
+            dispatch(
+                {
+                    type: "IS-LOADING",
+                    isLoading: val,
                 });
         }
     }

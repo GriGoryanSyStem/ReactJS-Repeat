@@ -1,6 +1,7 @@
 import React from "react";
 import c from "./Users.module.css";
 import personImage from "../../pictures/personUser.png";
+import Loader from "../Common/Loader";
 
 function Users(props) {
     let pages = [];
@@ -20,29 +21,31 @@ function Users(props) {
                 })}
             </div>
             <div className={c.allUsersContainer}>
-                {props.usersReducer.usersData.map((i, k) => {
-                    return (
-                        <div key={k} className={c.userItem}>
-                            <div className={c.userItemImage}>
-                                <div className={c.imageButton}>
-                                    <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
-                                    <div>
-                                        <button className={c.button}
-                                                onClick={(e) => {
-                                                    e.currentTarget.innerText === 'Follow'
-                                                        ? props.followFunc(false, i.id)
-                                                        : props.followFunc(true, i.id)
-                                                }}>{i.followed ? 'Follow' : "UnFollow"}
-                                        </button>
+                {props.isLoading
+                    ? <Loader/>
+                    : props.usersReducer.usersData.map((i, k) => {
+                        return (
+                            <div key={k} className={c.userItem}>
+                                <div className={c.userItemImage}>
+                                    <div className={c.imageButton}>
+                                        <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
+                                        <div>
+                                            <button className={c.button}
+                                                    onClick={(e) => {
+                                                        e.currentTarget.innerText === 'Follow'
+                                                            ? props.followFunc(false, i.id)
+                                                            : props.followFunc(true, i.id)
+                                                    }}>{i.followed ? 'Follow' : "UnFollow"}
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
+                                <div>User ID : {i.id}</div>
+                                <div>Name : {i.name}</div>
+                                <div className={c.status}>Status : {i.status}</div>
                             </div>
-                            <div>User ID : {i.id}</div>
-                            <div>Name : {i.name}</div>
-                            <div className={c.status}>Status : {i.status}</div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
             </div>
         </div>
     )
