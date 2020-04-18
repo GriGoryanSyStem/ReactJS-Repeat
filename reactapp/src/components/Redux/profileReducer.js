@@ -4,8 +4,14 @@ let initialState = {
         {id: 2, massage: 'Hi, how are you', likes: 4},
         {id: 3, massage: 'My name is Props', likes: 90},
     ],
-    textTextArea: ''
+    textTextArea: '',
+    profile:null
 };
+export const setUserProfileAC = (profile)=>({
+    type:'SET_USER_PROFILE',
+    profile:profile
+});
+
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_POST":
@@ -18,6 +24,11 @@ const profileReducer = (state = initialState, action) => {
             return {
                 ...state,
                 textTextArea:action.newText
+            };
+            case "SET_USER_PROFILE":
+            return {
+                ...state,
+                profile:action.profile
             };
         default:
             return state;

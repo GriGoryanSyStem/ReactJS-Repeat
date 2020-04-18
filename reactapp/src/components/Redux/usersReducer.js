@@ -21,13 +21,13 @@ export const followAC = (isFollowed, userId) => ({
     type: "FOLLOWED", userId: userId, isFollowed: isFollowed
 });
 export const setUsersAC = (apiResponseResult, apiTotalUsersCount) => ({
-    type: "SET-USERS", users: apiResponseResult, total: apiTotalUsersCount
+    type: "SET_USERS", users: apiResponseResult, total: apiTotalUsersCount
 });
 export const clickPageAC = (page) => ({
-    type: "SELECTED-PAGE", page: page,
+    type: "SELECTED_PAGE", page: page,
 });
 export const isLoadingAC = (val) => ({
-    type: "IS-LOADING",
+    type: "IS_LOADING",
     isLoading: val,
 });
 
@@ -44,18 +44,18 @@ const usersReducer = (state = initialState, action) => {
                     }
                 })
             };
-        case "SET-USERS":
+        case "SET_USERS":
             return {
                 ...state,
                 usersData: action.users,
                 totalUsersCount: action.total,
             };
-        case "SELECTED-PAGE":
+        case "SELECTED_PAGE":
             return {
                 ...state,
                 currentPage: action.page,
             };
-        case "IS-LOADING":
+        case "IS_LOADING":
             return {
                 ...state,
                 isLoading: action.isLoading,

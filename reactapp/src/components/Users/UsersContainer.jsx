@@ -19,7 +19,6 @@ class UsersApi extends React.Component {
         this.props.clickPageAC(pagNumber);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pagNumber}&count=${this.props.pageSize}`)
             .then(response => {
-                debugger
                 this.props.isLoadingAC(false);
                 return this.props.setUsersAC(response.data.items, response.data.totalCount);
             });

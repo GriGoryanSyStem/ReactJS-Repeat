@@ -2,6 +2,7 @@ import React from "react";
 import c from "./Users.module.css";
 import personImage from "../../pictures/personUser.png";
 import Loader from "../Common/Loader";
+import {NavLink} from "react-router-dom";
 
 function Users(props) {
     let pages = [];
@@ -28,8 +29,10 @@ function Users(props) {
                             <div key={k} className={c.userItem}>
                                 <div className={c.userItemImage}>
                                     <div className={c.imageButton}>
-                                        <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
-                                        <div>
+                                        <NavLink to = {`profile/${i.id}`}>
+                                            <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
+                                        </NavLink>
+                                       <div>
                                             <button className={c.myButton}
                                                     onClick={(e) => {
                                                         e.currentTarget.innerText === 'Follow'

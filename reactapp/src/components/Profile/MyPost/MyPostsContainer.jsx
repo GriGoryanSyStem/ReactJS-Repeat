@@ -1,11 +1,20 @@
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
+import React from "react";
 
+class MyPostsContainer extends React.Component {
+    render() {
+        return (
+            <MyPosts profilePage={this.props.profilePage}/>
+        )
+    }
+}
 let mapStateToProps = (state) => {
     return {
         profilePage: state.profilePageR
     }
 };
+
 let mapDispatchToProps = (dispatch) => {
     return {
         onPostChange: (param_e) => {
@@ -19,7 +28,7 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 };
-const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
-export default MyPostsContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(MyPostsContainer);
+
 
 
