@@ -11,11 +11,25 @@ let initialState = {
             followed: null
         }
     ],
-    pageSize:20,
-    totalUsersCount:0,
-    currentPage:1,
-    isLoading:null,
+    pageSize: 20,
+    totalUsersCount: 0,
+    currentPage: 1,
+    isLoading: null,
 };
+
+export const followAC = (isFollowed, userId) => ({
+    type: "FOLLOWED", userId: userId, isFollowed: isFollowed
+});
+export const setUsersAC = (apiResponseResult, apiTotalUsersCount) => ({
+    type: "SET-USERS", users: apiResponseResult, total: apiTotalUsersCount
+});
+export const clickPageAC = (page) => ({
+    type: "SELECTED-PAGE", page: page,
+});
+export const isLoadingAC = (val) => ({
+    type: "IS-LOADING",
+    isLoading: val,
+});
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -34,14 +48,14 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 usersData: action.users,
-                totalUsersCount:action.total,
+                totalUsersCount: action.total,
             };
         case "SELECTED-PAGE":
             return {
                 ...state,
                 currentPage: action.page,
             };
-            case "IS-LOADING":
+        case "IS-LOADING":
             return {
                 ...state,
                 isLoading: action.isLoading,

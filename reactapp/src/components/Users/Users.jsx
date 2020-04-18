@@ -5,7 +5,7 @@ import Loader from "../Common/Loader";
 
 function Users(props) {
     let pages = [];
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let pagesCount = Math.ceil(props.usersReducer.totalUsersCount / props.usersReducer.pageSize);
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
@@ -16,12 +16,12 @@ function Users(props) {
                     return (
                         <button onClick={() => {
                             props.clickButton(i)
-                        }} key={k} className={props.currentPage === i ? c.selected : ''}>{i}</button>
+                        }} key={k} className={props.usersReducer.currentPage === i ? c.selected : ''}>{i}</button>
                     )
                 })}
             </div>
             <div className={c.allUsersContainer}>
-                {props.isLoading
+                {props.usersReducer.isLoading
                     ? <Loader/>
                     : props.usersReducer.usersData.map((i, k) => {
                         return (
@@ -30,11 +30,11 @@ function Users(props) {
                                     <div className={c.imageButton}>
                                         <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
                                         <div>
-                                            <button className={c.button}
+                                            <button className={c.myButton}
                                                     onClick={(e) => {
                                                         e.currentTarget.innerText === 'Follow'
-                                                            ? props.followFunc(false, i.id)
-                                                            : props.followFunc(true, i.id)
+                                                            ? props.followAC(false, i.id)
+                                                            : props.followAC(true, i.id)
                                                     }}>{i.followed ? 'Follow' : "UnFollow"}
                                             </button>
                                         </div>

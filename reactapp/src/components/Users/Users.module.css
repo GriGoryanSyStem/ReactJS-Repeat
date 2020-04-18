@@ -17,16 +17,36 @@
 }
 .userItem{
     width: 180px;
-    border: 1px solid silver;
+    background: #1999ec;
     overflow: hidden;
     margin: 3px;
     height: 150px;
 }
 .userItemImage img{
     width: 70px;
+    background: #62dafb;
 }
-.userItemImage .button{
-   cursor: pointer;
+.userItemImage .myButton {
+    width: 90px;
+    box-shadow: 0 10px 14px -7px #0f7fcd;
+    background-color: #0f7fcd;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 9px 9px;
+    border: 1px solid #97d6f8;
+}
+.myButton:hover {
+    color: #08004f;
+    background: #97d6f8 linear-gradient(to bottom, #97d6f8 5%, #97d6f8 100%);
+}
+.myButton:active {
+    position:relative;
+    top:1px;
 }
 .imageButton{
     display: flex;
