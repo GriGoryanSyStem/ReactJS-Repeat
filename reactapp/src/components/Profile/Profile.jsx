@@ -3,16 +3,15 @@ import c from './Profile.module.css'
 import ProfileInfo from "./PofileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPost/MyPostsContainer";
 
-function Profile(props) {
-    debugger
+const Profile = (props) => {
     return (
         <div>
             <div className={c.content}>
-                <ProfileInfo profile = {props.profile}/>
+                <ProfileInfo profile={props.profile}/>
                 <MyPostsContainer/>
             </div>
         </div>
     )
-}
+};
 
 export default Profile;

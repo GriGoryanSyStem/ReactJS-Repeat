@@ -9,13 +9,13 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 
-const App = (props) => {
+const App = () => {
     return (
         <div className="appWrapper">
             <Header/>
             <NavBar/>
             <Route render={() => <ProfileContainer/>}
-                   path="/profile"/>
+                   path="/profile/:userId?"/>
             <Route render={() => <DialogsContainer/>}
                    path="/dialogs"/>
             <Route render={() => <UsersContainer/>} path="/users"/>

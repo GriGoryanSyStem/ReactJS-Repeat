@@ -36,10 +36,6 @@ class UsersApi extends React.Component {
 let mapStateToProps = (state) => {
     return {
         usersReducer: state.usersPageR,
-        pageSize: state.usersPageR.pageSize,
-        totalUsersCount: state.usersPageR.totalUsersCount,
-        currentPage: state.usersPageR.currentPage,
-        isLoading: state.usersPageR.isLoading,
     }
 };
 
