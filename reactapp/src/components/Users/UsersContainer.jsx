@@ -7,7 +7,7 @@ import {clickPageAC, followAC, isLoadingAC, setUsersAC} from "../Redux/usersRedu
 class UsersApi extends React.Component {
     componentDidMount() {
         this.props.isLoadingAC(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.userCount}`)
             .then(response => {
                 this.props.isLoadingAC(false);
                 return this.props.setUsersAC(response.data.items, response.data.totalCount);
@@ -17,7 +17,7 @@ class UsersApi extends React.Component {
     clickButton = (pagNumber) => {
         this.props.isLoadingAC(true);
         this.props.clickPageAC(pagNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pagNumber}&count=${this.props.pageSize}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pagNumber}&count=${this.props.userCount}`)
             .then(response => {
                 this.props.isLoadingAC(false);
                 return this.props.setUsersAC(response.data.items, response.data.totalCount);
@@ -36,6 +36,7 @@ class UsersApi extends React.Component {
 let mapStateToProps = (state) => {
     return {
         usersReducer: state.usersPageR,
+        userCount:state.usersPageR.pageSize,
     }
 };
 

@@ -1,17 +1,6 @@
 let initialState = {
-    usersData: [
-        // {
-        //     name: "Person",
-        //     id: 0,
-        //     photos: {
-        //         small: null,
-        //         large: null
-        //     },
-        //     status: null,
-        //     followed: null
-        // }
-    ],
-    pageSize: 20,
+    usersData: [],
+    pageSize:20,
     totalUsersCount: null,
     currentPage: 1,
     isLoading: null,

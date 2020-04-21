@@ -12,3 +12,24 @@
 .pic {
     width: 85px;
 }
+.headerContainer{
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoItem{
+    display: flex;
+}
+.loginItem{
+    display: flex;
+}
+.loginUserName{
+
+}
+.loginImage{
+    width: 50px;
+}
+.loginImage img{
+    width: 100%;
+}

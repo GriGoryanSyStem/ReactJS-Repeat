@@ -4,7 +4,7 @@ import personImage from "../../pictures/personUser.png";
 import Loader from "../Common/Loader";
 import {NavLink} from "react-router-dom";
 
-function Users(props) {
+const Users = (props) => {
     let pages = [];
     let pagesCount = Math.ceil(props.usersReducer.totalUsersCount / props.usersReducer.pageSize);
     for (let i = 1; i <= pagesCount; i++) {
@@ -17,7 +17,7 @@ function Users(props) {
                     return (
                         <button onClick={() => {
                             props.clickButton(i)
-                        }} key={k} className={props.usersReducer.currentPage === i ? c.selected : ''}>{i}</button>
+                        }} key={k} className={props.usersReducer.currentPage === i ? `${c.selected} ${c.pageButton}` : c.pageButton}>{i}</button>
                     )
                 })}
             </div>
@@ -52,6 +52,6 @@ function Users(props) {
             </div>
         </div>
     )
-}
+};
 
 export default Users;

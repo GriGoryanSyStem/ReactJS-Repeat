@@ -16,11 +16,11 @@
     flex-wrap: wrap;
 }
 .userItem{
-    width: 180px;
+    width: 18%;
     background: #1999ec;
     overflow: hidden;
     margin: 3px;
-    height: 150px;
+    height: 10em;
 }
 .userItemImage img{
     width: 70px;
@@ -53,6 +53,17 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+.pageButton{
+    cursor: pointer;
+    margin: 1px auto;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: sans-serif;
+}
 .selected{
     font-weight: bold;
     background: #afe2139e;
@@ -61,12 +72,17 @@
     cursor: pointer;
 }
 .pagesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 3px auto;
 }
 .allUsersContainer{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 .status{
