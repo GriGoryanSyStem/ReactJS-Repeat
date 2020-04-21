@@ -3,6 +3,7 @@ import c from "./Users.module.css";
 import personImage from "../../pictures/personUser.png";
 import Loader from "../Common/Loader";
 import {NavLink} from "react-router-dom";
+import axios from "axios";
 
 const Users = (props) => {
     let pages = [];
@@ -17,7 +18,8 @@ const Users = (props) => {
                     return (
                         <button onClick={() => {
                             props.clickButton(i)
-                        }} key={k} className={props.usersReducer.currentPage === i ? `${c.selected} ${c.pageButton}` : c.pageButton}>{i}</button>
+                        }} key={k}
+                                className={props.usersReducer.currentPage === i ? `${c.selected} ${c.pageButton}` : c.pageButton}>{i}</button>
                     )
                 })}
             </div>
@@ -29,17 +31,33 @@ const Users = (props) => {
                             <div key={k} className={c.userItem}>
                                 <div className={c.userItemImage}>
                                     <div className={c.imageButton}>
-                                        <NavLink to = {`profile/${i.id}`}>
+                                        <NavLink to={`profile/${i.id}`}>
                                             <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
                                         </NavLink>
-                                       <div>
+                                        <div>
+
                                             <button className={c.myButton}
                                                     onClick={(e) => {
-                                                        e.currentTarget.innerText === 'Follow'
-                                                            ? props.followAC(false, i.id)
-                                                            : props.followAC(true, i.id)
+                                                        if (e.currentTarget.innerText === 'Follow') {
+                                                            axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${i.id}`, {
+                                                                withCredentials: true,
+                                                                headers: {"API-KEY": '0e63aab2-f156-445a-b8a0-ab2fbb0070ad'},
+                                                            }).then(response => {
+                                                                response.data.resultCode === 0 &&
+                                                                props.followAC(false, i.id);
+                                                            })
+                                                        } else {
+                                                            axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${i.id}`, {}, {
+                                                                withCredentials: true,
+                                                                headers: {"API-KEY": '0e63aab2-f156-445a-b8a0-ab2fbb0070ad'},
+                                                            }).then(response => {
+                                                                response.data.resultCode === 0 &&
+                                                                props.followAC(true, i.id);
+                                                            })
+                                                        }
                                                     }}>{i.followed ? 'Follow' : "UnFollow"}
                                             </button>
+
                                         </div>
                                     </div>
                                 </div>
