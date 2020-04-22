@@ -37,17 +37,21 @@ const Users = (props) => {
                                         </NavLink>
                                         <div>
 
-                                            <button className={c.myButton}
+                                            <button disabled = {props.usersReducer.isFollowing.some(elem => elem === i.id)} className={c.myButton}
                                                     onClick={(e) => {
                                                         if (e.currentTarget.innerText === 'Follow') {
+                                                            props.isFollowingAC(true,i.id);
                                                             usersAPI.unFollowUser(i.id).then(data => {
                                                                 data.resultCode === 0 &&
                                                                 props.followAC(false, i.id);
+                                                                props.isFollowingAC(false,i.id);
                                                             })
                                                         } else {
+                                                            props.isFollowingAC(true,i.id);
                                                             usersAPI.followUser(i.id).then(data => {
                                                                 data.resultCode === 0 &&
                                                                 props.followAC(true, i.id);
+                                                                props.isFollowingAC(false,i.id);
                                                             })
                                                         }
                                                     }}>{i.followed ? 'Follow' : "UnFollow"}

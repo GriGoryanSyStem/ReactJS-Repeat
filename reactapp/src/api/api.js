@@ -2,7 +2,7 @@ import axios from "axios";
 
 let instance = axios.create({
     baseURL: 'https://social-network.samuraijs.com/api/1.0',
-    timeout: 15000,
+    timeout: 20000,
     headers: {"API-KEY": '0e63aab2-f156-445a-b8a0-ab2fbb0070ad'},
     withCredentials: true
 });

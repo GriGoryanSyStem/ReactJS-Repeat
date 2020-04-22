@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import React from "react";
 import Users from "./Users";
-import {clickPageAC, followAC, isLoadingAC, setUsersAC} from "../Redux/usersReducer";
+import {clickPageAC, followAC, isFollowingAC, isLoadingAC, setUsersAC} from "../Redux/usersReducer";
 import {usersAPI} from "../../api/api";
 
 class UsersApi extends React.Component {
@@ -25,9 +25,7 @@ class UsersApi extends React.Component {
 
     render() {
         return (
-            <Users clickButton={this.clickButton}
-                   followAC={this.props.followAC}
-                   usersReducer={this.props.usersReducer}/>
+            <Users {...this.props} clickButton = {this.clickButton}/>
         )
     }
 }
@@ -40,5 +38,5 @@ let mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    {followAC, setUsersAC, clickPageAC, isLoadingAC}  //mapDispatchToProps
+    {followAC, setUsersAC, clickPageAC, isLoadingAC,isFollowingAC}  //mapDispatchToProps
 )(UsersApi);
