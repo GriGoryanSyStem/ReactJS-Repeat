@@ -1,26 +1,25 @@
 import {connect} from "react-redux";
 import React from "react";
-import axios from "axios";
 import Users from "./Users";
 import {clickPageAC, followAC, isLoadingAC, setUsersAC} from "../Redux/usersReducer";
+import {usersAPI} from "../../api/api";
 
 class UsersApi extends React.Component {
     componentDidMount() {
         this.props.isLoadingAC(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.userCount}`,{withCredentials:true})
-            .then(response => {
+        usersAPI.getUsers(this.props.currentPage,this.props.pageSize)
+            .then(data => {
                 this.props.isLoadingAC(false);
-                return this.props.setUsersAC(response.data.items, response.data.totalCount);
+                return this.props.setUsersAC(data.items, data.totalCount);
             });
     }
 
     clickButton = (pagNumber) => {
         this.props.isLoadingAC(true);
         this.props.clickPageAC(pagNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pagNumber}&count=${this.props.userCount}`, {withCredentials:true})
-            .then(response => {
+        usersAPI.getUsers(pagNumber,this.props.pageSize).then(data => {
                 this.props.isLoadingAC(false);
-                return this.props.setUsersAC(response.data.items, response.data.totalCount);
+                return this.props.setUsersAC(data.items, data.totalCount);
             });
     };
 
@@ -36,7 +35,6 @@ class UsersApi extends React.Component {
 let mapStateToProps = (state) => {
     return {
         usersReducer: state.usersPageR,
-        userCount:state.usersPageR.pageSize,
     }
 };
 
