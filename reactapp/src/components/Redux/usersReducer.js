@@ -1,3 +1,5 @@
+import {usersAPI} from "../../api/api";
+
 let initialState = {
     usersData: [],
     pageSize: 20,
@@ -69,4 +71,35 @@ const usersReducer = (state = initialState, action) => {
             return state;
     }
 };
+
+export const getUsersThunk = (currentPage,pageSize) => {
+    return (dispatch) => {
+        dispatch(isLoadingAC(true));
+        usersAPI.getUsersApi(currentPage,pageSize).then(data => {
+                dispatch(isLoadingAC(false));
+                dispatch(setUsersAC(data.items, data.totalCount));
+            });
+    }
+};
+export const followThunk = (userId) => {
+    return (dispatch) => {
+        dispatch(isFollowingAC(true, userId));
+        usersAPI.unFollowApi(userId).then(data => {
+            data.resultCode === 0 &&
+            dispatch(followAC(false, userId));
+            dispatch(isFollowingAC(false, userId));
+        });
+    }
+};
+export const unFollowThunk = (userId) => {
+    return (dispatch) => {
+        dispatch(isFollowingAC(true, userId));
+        usersAPI.followApi(userId).then(data => {
+            data.resultCode === 0 &&
+            dispatch(followAC(true, userId));
+            dispatch(isFollowingAC(false, userId));
+        });
+    }
+};
+
 export default usersReducer;

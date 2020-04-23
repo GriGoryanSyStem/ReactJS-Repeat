@@ -5,7 +5,10 @@ import React from "react";
 class MyPostsContainer extends React.Component {
     render() {
         return (
-            <MyPosts profilePage={this.props.profilePage}/>
+            <MyPosts profilePage={this.props.profilePage}
+                     onPostChange = {this.props.onPostChange}
+                     addPostRef = {this.props.addPostRef}
+            />
         )
     }
 }

@@ -3,7 +3,6 @@ import c from "./Users.module.css";
 import personImage from "../../pictures/personUser.png";
 import Loader from "../Common/Loader";
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../api/api";
 
 const Users = (props) => {
     let pages = [];
@@ -28,7 +27,6 @@ const Users = (props) => {
             </div>
             <div className={c.allUsersContainer}>
                 {props.usersReducer.isLoading
-
                     ? <Loader/>
                     : props.usersReducer.usersData.map((i, k) => {
                         return (
@@ -39,29 +37,17 @@ const Users = (props) => {
                                             <img src={i.photos.small ? i.photos.small : personImage} alt="personImage"/>
                                         </NavLink>
                                         <div>
-
                                             <button
                                                 disabled={props.usersReducer.isFollowing.some(elem => elem === i.id)}
                                                 className={c.myButton}
                                                 onClick={(e) => {
                                                     if (e.currentTarget.innerText === 'Follow') {
-                                                        props.isFollowingAC(true, i.id);
-                                                        usersAPI.unFollowUser(i.id).then(data => {
-                                                            data.resultCode === 0 &&
-                                                            props.followAC(false, i.id);
-                                                            props.isFollowingAC(false, i.id);
-                                                        })
+                                                        props.followThunk(i.id);
                                                     } else {
-                                                        props.isFollowingAC(true, i.id);
-                                                        usersAPI.followUser(i.id).then(data => {
-                                                            data.resultCode === 0 &&
-                                                            props.followAC(true, i.id);
-                                                            props.isFollowingAC(false, i.id);
-                                                        })
+                                                        props.unFollowThunk(i.id);
                                                     }
                                                 }}>{i.followed ? 'Follow' : "UnFollow"}
                                             </button>
-
                                         </div>
                                     </div>
                                 </div>
