@@ -24,5 +24,17 @@ export const usersAPI = {
             .then(response => {
                 return response.data
             });
-    }
+    },
+    getProfileApi(userId){
+        return instance.get(`/profile/${userId}`)
+            .then(response => {
+                return response.data
+            });
+    },
+    authMeApi(){
+        return instance.get(`/auth/me`)
+            .then(response => {
+                return response.data
+            });
+    },
 };

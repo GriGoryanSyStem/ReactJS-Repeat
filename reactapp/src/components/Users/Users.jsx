@@ -15,10 +15,10 @@ const Users = (props) => {
             <div className={c.pagesContainer}>
                 {pages.map((i, k) => {
                     return (
-                        <div>
+                        <div key={k}>
                             <button onClick={() => {
                                 props.clickButton(i)
-                            }} key={k}
+                            }}
                                     className={props.usersReducer.currentPage === i ? `${c.selected} ${c.pageButton}` : c.pageButton}>{i}
                             </button>
                         </div>
