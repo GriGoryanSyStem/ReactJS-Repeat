@@ -16,10 +16,13 @@ const Users = (props) => {
             <div className={c.pagesContainer}>
                 {pages.map((i, k) => {
                     return (
-                        <button onClick={() => {
-                            props.clickButton(i)
-                        }} key={k}
-                                className={props.usersReducer.currentPage === i ? `${c.selected} ${c.pageButton}` : c.pageButton}>{i}</button>
+                        <div>
+                            <button onClick={() => {
+                                props.clickButton(i)
+                            }} key={k}
+                                    className={props.usersReducer.currentPage === i ? `${c.selected} ${c.pageButton}` : c.pageButton}>{i}
+                            </button>
+                        </div>
                     )
                 })}
             </div>
@@ -37,24 +40,26 @@ const Users = (props) => {
                                         </NavLink>
                                         <div>
 
-                                            <button disabled = {props.usersReducer.isFollowing.some(elem => elem === i.id)} className={c.myButton}
-                                                    onClick={(e) => {
-                                                        if (e.currentTarget.innerText === 'Follow') {
-                                                            props.isFollowingAC(true,i.id);
-                                                            usersAPI.unFollowUser(i.id).then(data => {
-                                                                data.resultCode === 0 &&
-                                                                props.followAC(false, i.id);
-                                                                props.isFollowingAC(false,i.id);
-                                                            })
-                                                        } else {
-                                                            props.isFollowingAC(true,i.id);
-                                                            usersAPI.followUser(i.id).then(data => {
-                                                                data.resultCode === 0 &&
-                                                                props.followAC(true, i.id);
-                                                                props.isFollowingAC(false,i.id);
-                                                            })
-                                                        }
-                                                    }}>{i.followed ? 'Follow' : "UnFollow"}
+                                            <button
+                                                disabled={props.usersReducer.isFollowing.some(elem => elem === i.id)}
+                                                className={c.myButton}
+                                                onClick={(e) => {
+                                                    if (e.currentTarget.innerText === 'Follow') {
+                                                        props.isFollowingAC(true, i.id);
+                                                        usersAPI.unFollowUser(i.id).then(data => {
+                                                            data.resultCode === 0 &&
+                                                            props.followAC(false, i.id);
+                                                            props.isFollowingAC(false, i.id);
+                                                        })
+                                                    } else {
+                                                        props.isFollowingAC(true, i.id);
+                                                        usersAPI.followUser(i.id).then(data => {
+                                                            data.resultCode === 0 &&
+                                                            props.followAC(true, i.id);
+                                                            props.isFollowingAC(false, i.id);
+                                                        })
+                                                    }
+                                                }}>{i.followed ? 'Follow' : "UnFollow"}
                                             </button>
 
                                         </div>
