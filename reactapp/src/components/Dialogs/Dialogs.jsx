@@ -2,8 +2,13 @@ import React from "react";
 import c from "./Dialogs.module.css"
 import DialogItem from "./DialogItem/DialogItems";
 import Massage from "./Massage/Massage";
+import {Redirect} from "react-router-dom";
 
 const Dialogs = (props) => {
+
+    if (!props.isAuth) {
+        return <Redirect to = {'/login'} />
+    }
     let onChangeArea = (e) => {
         props.changeMassageText(e.target.value);
     };

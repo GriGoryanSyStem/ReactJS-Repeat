@@ -2,6 +2,7 @@ import React from "react";
 import pic from "../../pictures/logo.svg";
 import photoPerson from '../../pictures/personUser.png'
 import c from "./Header.module.css";
+import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
     return (
@@ -12,7 +13,12 @@ const Header = (props) => {
                 </div>
                 <div className={c.loginItem}>
                     <div className={c.loginUserName}>
-                        <h3>{props.store.login ? props.store.login : 'Login'}</h3>
+                        {props.store.infoLogin.login
+                            ? props.store.infoLogin.login
+                            : <button className={c.myButton}>
+                                <NavLink to="/login">Login</NavLink>
+                            </button>
+                        }
                     </div>
                     <div className={c.loginImage}>
                         <img src={photoPerson} alt="userPhoto"/>

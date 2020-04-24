@@ -24,7 +24,6 @@ const NavBar = () => {
                 <div className={`${c.item} ${c.settingCont}`}>
                     <NavLink to="/settings" activeClassName={c.selected}>Settings</NavLink>
                 </div>
-
             </nav>
         </div>
     )

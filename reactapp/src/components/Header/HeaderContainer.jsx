@@ -9,7 +9,7 @@ class HeaderContainer extends React.Component {
     }
     render() {
         return (
-            <Header {...this.props} loginImage = {this.props.loginImage}/>
+            <Header {...this.props}/>
         )
     }
 }
@@ -17,7 +17,6 @@ class HeaderContainer extends React.Component {
 let mapStateToProps = (state) => {
     return {
         store: state.authR,
-        loginImage:state.profilePageR.profile
     }
 };
 

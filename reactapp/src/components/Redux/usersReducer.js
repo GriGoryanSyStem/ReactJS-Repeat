@@ -9,11 +9,11 @@ let initialState = {
     isFollowing: [],
 };
 
-export const followAC = (isFollowed, userId) => ({
+const followAC = (isFollowed, userId) => ({
     type: "FOLLOWED",
     userId: userId, isFollowed: isFollowed
 });
-export const setUsersAC = (apiResponseResult, apiTotalUsersCount) => ({
+const setUsersAC = (apiResponseResult, apiTotalUsersCount) => ({
     type: "SET_USERS",
     users: apiResponseResult, total: apiTotalUsersCount
 });
@@ -21,11 +21,11 @@ export const clickPageAC = (page) => ({
     type: "SELECTED_PAGE",
     page: page,
 });
-export const isLoadingAC = (val) => ({
+const isLoadingAC = (val) => ({
     type: "IS_LOADING",
     isLoading: val,
 });
-export const isFollowingAC = (following, userId) => ({
+const isFollowingAC = (following, userId) => ({
     type: "IS_FOLLOWING",
     following: following,
     userId: userId

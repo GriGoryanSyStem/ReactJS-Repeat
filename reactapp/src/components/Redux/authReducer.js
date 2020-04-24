@@ -5,7 +5,8 @@ let initialState = {
         id: null,
         login: null,
         email: null,
-    }
+    },
+    isAuth:false
 };
 
 export const setLoginAuthAC = (id, login, email) => ({
@@ -14,14 +15,15 @@ export const setLoginAuthAC = (id, login, email) => ({
         id: id,
         login: login,
         email: email
-    }
+    },
 });
 
 const auth = (state = initialState, action) => {
     if (action.type === "SET_LOGIN_AUTH") {
         return {
             ...state,
-            ...action.infoLogin
+            infoLogin:{...action.infoLogin},
+            isAuth:true
         };
     } else {
         return state;

@@ -9,7 +9,7 @@ let initialState = {
     textTextArea: '',
     profile: null
 };
-export const setUserProfileAC = (profile) => ({
+const setUserProfileAC = (profile) => ({
     type: 'SET_USER_PROFILE',
     profile: profile
 });

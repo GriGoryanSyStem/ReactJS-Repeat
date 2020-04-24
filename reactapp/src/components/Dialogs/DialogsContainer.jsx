@@ -3,9 +3,11 @@ import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
     return {
-        dialogPage: state.dialogPageR
+        dialogPage: state.dialogPageR,
+        isAuth:state.authR.isAuth,
     }
 };
+
 let mapDispatchToProps = (dispatch) => {
     return {
         changeMassageText: (param_e) => {

@@ -1,0 +1,28 @@
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #120046;
+    background-image: url("../../pictures/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 10px;
+    margin-left: 5px;
+}
+.formContainer{
+    border: 5px solid silver;
+    display: block;
+    height: 28%;
+
+}.formContainer form{
+     margin: 30px;
+ }
+ .buttonContainer{
+     margin-top: 10%;
+     text-align: center;
+ }
+ .formItem{
+
+ }
