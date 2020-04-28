@@ -7,6 +7,7 @@ import {
     getUsersThunk,
     unFollowThunk
 } from "../Redux/usersReducer";
+import {compose} from "redux";
 
 
 class UsersApi extends React.Component {
@@ -29,8 +30,7 @@ let mapStateToProps = (state) => {
         usersReducer: state.usersPageR,
     }
 };
-
-export default connect(
-    mapStateToProps,
-    {clickPageAC,getUsersThunk,followThunk,unFollowThunk}  //mapDispatchToProps
-)(UsersApi);
+export default compose(
+    connect(mapStateToProps,
+        {clickPageAC,getUsersThunk,followThunk,unFollowThunk}))
+    (UsersApi);

@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {profileThunk} from "../Redux/profileReducer";
 import {redirectComponentHoc} from "../HOC/redirectComponentHoc";
+import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
@@ -26,6 +27,8 @@ let mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps,
-    {profileThunk}
-)(withRouter(redirectComponentHoc(ProfileContainer)));
+export default compose(
+    connect(mapStateToProps,{profileThunk}),
+    withRouter,
+    redirectComponentHoc
+)(ProfileContainer);

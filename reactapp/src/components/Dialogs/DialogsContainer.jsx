@@ -2,6 +2,7 @@ import {connect} from "react-redux";
 import React from "react";
 import {redirectComponentHoc} from "../HOC/redirectComponentHoc";
 import Dialogs from "./Dialogs";
+import {compose} from "redux";
 
 let mapStateToProps = (state) => {
     return {
@@ -23,4 +24,9 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 };
-export default connect(mapStateToProps, mapDispatchToProps)(redirectComponentHoc(Dialogs));
+
+
+
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    redirectComponentHoc)(Dialogs);
