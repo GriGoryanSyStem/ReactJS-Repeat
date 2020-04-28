@@ -22,7 +22,7 @@ const App = () => {
             <Route render={() => <UsersContainer/>} path="/users"/>
             <Route component={Friend} path="/friends"/>
             <Route component={Settings} path="/settings"/>
-            <Route component={Login} path="/login"/>
+            <Route render={() => <Login/>} path="/login"/>
         </div>
     );
 };

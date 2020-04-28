@@ -6,9 +6,6 @@ import {Redirect} from "react-router-dom";
 
 const Dialogs = (props) => {
 
-    if (!props.isAuth) {
-        return <Redirect to = {'/login'} />
-    }
     let onChangeArea = (e) => {
         props.changeMassageText(e.target.value);
     };

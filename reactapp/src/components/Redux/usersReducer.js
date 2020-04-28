@@ -72,13 +72,14 @@ const usersReducer = (state = initialState, action) => {
     }
 };
 
-export const getUsersThunk = (currentPage,pageSize) => {
+export const getUsersThunk = (currentPage = 1, pageSize) => {
     return (dispatch) => {
         dispatch(isLoadingAC(true));
-        usersAPI.getUsersApi(currentPage,pageSize).then(data => {
-                dispatch(isLoadingAC(false));
-                dispatch(setUsersAC(data.items, data.totalCount));
-            });
+        usersAPI.getUsersApi(currentPage, pageSize).then(data => {
+            dispatch(isLoadingAC(false));
+            dispatch(clickPageAC(currentPage));
+            dispatch(setUsersAC(data.items, data.totalCount));
+        });
     }
 };
 export const followThunk = (userId) => {
