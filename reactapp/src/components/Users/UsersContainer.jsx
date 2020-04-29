@@ -1,13 +1,13 @@
-import {connect} from "react-redux";
 import React from "react";
-import Users from "./Users";
+import {compose} from "redux";
+import {connect} from "react-redux";
 import {
     clickPageAC,
     followThunk,
     getUsersThunk,
     unFollowThunk
 } from "../Redux/usersReducer";
-import {compose} from "redux";
+import Users from "./Users";
 
 
 class UsersApi extends React.Component {

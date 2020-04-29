@@ -1,8 +1,8 @@
-import {connect} from "react-redux";
 import React from "react";
+import {connect} from "react-redux";
 import {redirectComponentHoc} from "../HOC/redirectComponentHoc";
-import Dialogs from "./Dialogs";
 import {compose} from "redux";
+import Dialogs from "./Dialogs";
 
 let mapStateToProps = (state) => {
     return {

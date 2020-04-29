@@ -1,10 +1,10 @@
 import React from "react";
-import Profile from "./Profile";
+import {compose} from "redux";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {profileThunk} from "../Redux/profileReducer";
 import {redirectComponentHoc} from "../HOC/redirectComponentHoc";
-import {compose} from "redux";
+import Profile from "./Profile";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
