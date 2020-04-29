@@ -6,19 +6,22 @@ import userImage from '../../../pictures/personUser.png';
 class ProfileInfo extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             editMode: false,
-            text:'Yerevan'
+            status:this.props.status,
         }
     }
+
     changeStatus = () => {
         this.setState({
             editMode: !this.state.editMode
         })
+        this.props.updateStatusThunk(this.state.status);
     }
-    changeInputText = (e) =>{
+    changeStatusText = (e) =>{
         this.setState({
-            text: e.target.value
+            status:e.currentTarget.value
         })
     }
 
@@ -32,15 +35,18 @@ class ProfileInfo extends React.Component {
                 <div className={c.item}>
                     <img src={!this.props.profile.photos.large ? userImage : this.props.profile.photos.large}
                          alt="userPhoto"/>
-
                     <div className={c.statusContainer}>
                         {!this.state.editMode &&
                         <div>
-                            <span onClick={this.changeStatus}>{this.state.text}</span>
+                            <p onClick={this.changeStatus}>{this.props.status ? this.props.status : 'No Status'}</p>
                         </div>}
                         {this.state.editMode &&
                         <div>
-                            <input onChange={this.changeInputText} autoFocus={true} onBlur={this.changeStatus} value={this.state.text}/>
+                            <input value={this.state.status}
+                                   onChange={this.changeStatusText}
+                                   autoFocus={true}
+                                   onBlur={this.changeStatus}
+                                   />
                         </div>}
                     </div>
                     <h2>{this.props.profile.fullName}</h2>
