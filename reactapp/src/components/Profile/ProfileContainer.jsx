@@ -32,5 +32,5 @@ let mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps,{profileThunk,statusThunk,updateStatusThunk}),
     withRouter,
-    redirectComponentHoc
+    // redirectComponentHoc // vor miacnum enq Redirecta linum Login
 )(ProfileContainer);
