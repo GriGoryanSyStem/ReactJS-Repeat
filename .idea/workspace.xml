@@ -20,28 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc575b0e-fda7-4f09-bc1e-4e4d06908bc9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reactapp/src/indextwo.html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ReactJS-Repeat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ReactJS-Repeat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/User.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.idea/aaaa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HOC/redirectComponentHoc.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HOC/redirectComponentHoc.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPostsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/dialogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/dialogReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/profileReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Users/UsersContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +57,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1bIXZDm5sQvOzEmkNkuzhCQUjNO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -70,10 +72,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -96,6 +99,8 @@
       <updated>1588320635231</updated>
       <workItem from="1588320639965" duration="348000" />
       <workItem from="1588321010252" duration="1954000" />
+      <workItem from="1588330128777" duration="1377000" />
+      <workItem from="1588338642254" duration="10021000" />
     </task>
     <servers />
   </component>
@@ -112,6 +117,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588321915560">
@@ -122,25 +128,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1154" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588322809407" />
-    <state width="914" height="281" key="GridCell.Tab.0.bottom" timestamp="1588322969214">
+    <state width="914" height="277" key="GridCell.Tab.0.bottom" timestamp="1588349403882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588322969214" />
-    <state width="914" height="281" key="GridCell.Tab.0.center" timestamp="1588322969214">
+    <state width="914" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588349403882" />
+    <state width="914" height="277" key="GridCell.Tab.0.center" timestamp="1588349403882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588322969214" />
-    <state width="914" height="281" key="GridCell.Tab.0.left" timestamp="1588322969214">
+    <state width="914" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588349403882" />
+    <state width="914" height="277" key="GridCell.Tab.0.left" timestamp="1588349403882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588322969214" />
-    <state width="914" height="281" key="GridCell.Tab.0.right" timestamp="1588322969214">
+    <state width="914" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588349403882" />
+    <state width="914" height="277" key="GridCell.Tab.0.right" timestamp="1588349403882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588322969214" />
-    <state x="922" y="168" key="SettingsEditor" timestamp="1588322917443">
+    <state width="914" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588349403882" />
+    <state x="922" y="168" key="SettingsEditor" timestamp="1588331204811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588322917443" />
+    <state x="922" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588331204811" />
+    <state x="1096" y="242" key="run.anything.popup" timestamp="1588344156376">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1096" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588344156376" />
   </component>
 </project>

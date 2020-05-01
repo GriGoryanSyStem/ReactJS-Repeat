@@ -6,7 +6,6 @@ let initialState = {
         {id: 2, massage: 'Hi, how are you', likes: 4},
         {id: 3, massage: 'My name is Props', likes: 90},
     ],
-    textTextArea: '',
     profile: null,
     status:''
 };
@@ -19,19 +18,17 @@ const getStatusProfileAC = (textStatus) => ({
     type: 'GET_STATUS_PROFILE',
     status: textStatus
 });
+export const onChangeAreaAC = (newProfilePost) => ({
+    type: 'ADD_POST',
+    newPost:newProfilePost
+});
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_POST":
             return {
                 ...state,
-                postData: [...state.postData, {id: 6, massage: state.textTextArea, likes: 5}],
-                textTextArea: ""
-            };
-        case "UPDATE_NEW_POST_TEXT":
-            return {
-                ...state,
-                textTextArea: action.newText
+                postData: [...state.postData, {id: 6, massage: action.newPost, likes: 5}],
             };
         case "SET_USER_PROFILE":
             return {

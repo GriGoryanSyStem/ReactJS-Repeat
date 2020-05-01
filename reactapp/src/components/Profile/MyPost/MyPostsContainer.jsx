@@ -1,37 +1,16 @@
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 import React from "react";
+import {onChangeAreaAC} from "../../Redux/profileReducer";
 
-class MyPostsContainer extends React.Component {
-    render() {
-        return (
-            <MyPosts profilePage={this.props.profilePage}
-                     onPostChange = {this.props.onPostChange}
-                     addPostRef = {this.props.addPostRef}
-            />
-        )
-    }
-}
+
 let mapStateToProps = (state) => {
     return {
-        profilePage: state.profilePageR
+        profilePage: state.profilePageR,
     }
 };
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        onPostChange: (param_e) => {
-            dispatch({
-                type: 'UPDATE_NEW_POST_TEXT',
-                newText: param_e,
-            })
-        },
-        addPostRef: () => {
-            dispatch({type: 'ADD_POST'})
-        }
-    }
-};
-export default connect(mapStateToProps, mapDispatchToProps)(MyPostsContainer);
+export default connect(mapStateToProps, {onChangeAreaAC})(MyPosts);
 
 
 

@@ -11,20 +11,19 @@ let initialState = {
         {id: 2, massage: 'How are you'},
         {id: 3, massage: 'React'},
     ],
-    newMessageTextArea: '',
 };
+export const sendMassageAC = (newMassageTextArea)=>{
+    return{
+        type: 'SEND_MASSAGE',
+        newMassageTextArea:newMassageTextArea
+    }
+}
 const dialogReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "ADD_NEW_MASSAGE_TEXT":
-            return {
-                ...state,
-                newMessageTextArea: action.massage
-            };
         case "SEND_MASSAGE": // the same push spread operator ====>   [...state.massagesData, {a:4, b:text,}]
             return {
                 ...state,
-                massagesData: [...state.massagesData, {id: 4, massage: state.newMessageTextArea,}],
-                newMessageTextArea: ''
+                massagesData: [...state.massagesData, {id: 4, massage: action.newMassageTextArea}],
             };
         default:
             return state;
