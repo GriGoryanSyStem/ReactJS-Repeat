@@ -33,4 +33,4 @@ let mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps,
         {clickPageAC,getUsersThunk,followThunk,unFollowThunk}))
-    (UsersApi);
+(UsersApi);
