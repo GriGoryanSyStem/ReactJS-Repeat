@@ -1,4 +1,3 @@
-import React from "react";
 import {compose} from "redux";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
@@ -17,7 +16,5 @@ let mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps,{profileThunk,statusThunk,updateStatusThunk}),
-    withRouter,
-    // redirectComponentHoc // vor miacnum enq Redirecta linum Login
-)(Profile);
+    withRouter,/* redirectComponentHoc*/)(Profile);
 

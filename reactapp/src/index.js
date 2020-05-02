@@ -8,13 +8,14 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from 'react-redux';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </BrowserRouter>
-    </React.StrictMode>,
+    // <React.StrictMode> UNSAFE_componentWillMount old method dont use
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>
+    // </React.StrictMode>
+    ,
     document.getElementById('root')
 );
 

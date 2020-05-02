@@ -20,24 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc575b0e-fda7-4f09-bc1e-4e4d06908bc9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/HOC/redirectComponentHoc.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HOC/redirectComponentHoc.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPosts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPostsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/dialogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/dialogReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/profileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/redux-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <workItem from="1588320639965" duration="348000" />
       <workItem from="1588321010252" duration="1954000" />
       <workItem from="1588330128777" duration="1377000" />
-      <workItem from="1588338642254" duration="10021000" />
+      <workItem from="1588338642254" duration="15095000" />
     </task>
     <servers />
   </component>
@@ -148,6 +140,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588331204811" />
+    <state x="1156" y="136" width="585" height="801" key="find.popup" timestamp="1588410431704">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1156" y="136" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588410431704" />
     <state x="1096" y="242" key="run.anything.popup" timestamp="1588344156376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
