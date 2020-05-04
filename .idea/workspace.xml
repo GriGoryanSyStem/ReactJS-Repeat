@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc575b0e-fda7-4f09-bc1e-4e4d06908bc9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/reactapp/src/components/Validators/FormsControls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactapp/src/components/Validators/FormsControls.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactapp/src/components/Validators/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HOC/redirectComponentHoc.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HOC/redirectComponentHoc.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/MyPost/MyPostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -67,6 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
@@ -92,7 +91,7 @@
       <workItem from="1588320639965" duration="348000" />
       <workItem from="1588321010252" duration="1954000" />
       <workItem from="1588330128777" duration="1377000" />
-      <workItem from="1588338642254" duration="15095000" />
+      <workItem from="1588338642254" duration="22186000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,11 @@ import React from "react";
 import Post from "./Post/Post";
 import c from "../Profile.module.css";
 import {Field, reduxForm} from "redux-form";
+import {maxLength, minLength, required} from "../../Validators/validators";
+import {renderField} from "../../Validators/FormsControls";
+
+const maxLength15 = maxLength(15);
+const minLength1 = minLength(2);
 
 function MyPostAddPostForm(props) {
     let myHandleSubmit = (e) => {
@@ -11,7 +16,14 @@ function MyPostAddPostForm(props) {
         <div className={c.myPostCont}>
             <form onSubmit={props.handleSubmit(myHandleSubmit)}>
                 <h2>My Posts</h2>
-                <Field component='textarea' name={"myPostText"} cols="25" rows="3"/>
+                <Field type="textarea"
+                       label="MyPost"
+                       name={"myPostText"}
+                       component={renderField}
+                       validate={[required, maxLength15, minLength1]}
+                       cols="25"
+                       rows="3"
+                />
                 <div className={c.addPostBtn}>
                     <button>AddPost</button>
                 </div>
@@ -25,5 +37,4 @@ function MyPostAddPostForm(props) {
     )
 }
 
-MyPostAddPostForm = reduxForm({form: 'myPostMassage'})(MyPostAddPostForm);
-export default MyPostAddPostForm;
+export default reduxForm({form: 'myPostMassage'})(MyPostAddPostForm);
