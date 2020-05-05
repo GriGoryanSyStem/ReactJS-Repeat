@@ -14,7 +14,11 @@ const Header = (props) => {
                 <div className={c.loginItem}>
                     <div className={c.loginUserName}>
                         {props.store.infoLogin.login
-                            ? props.store.infoLogin.login
+                            ? <div>{props.store.infoLogin.login}
+                            <button className={c.myButton}
+                            onClick={props.logOutThunk}>
+                                LogOut
+                            </button></div>
                             : <button className={c.myButton}>
                                 <NavLink to="/login">Login</NavLink>
                             </button>

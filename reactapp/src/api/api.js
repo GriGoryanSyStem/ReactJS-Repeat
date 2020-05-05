@@ -53,4 +53,16 @@ export const usersAPI = {
                 return response.data
             });
     },
+    loginApi(email,password,rememberMe = false){
+        return instance.post(`/auth/login`,{email,password,rememberMe})
+            .then(response => {
+                return response.data
+            });
+    },
+    logOutApi(){
+        return instance.delete(`/auth/login`)
+            .then(response => {
+                return response.data
+            });
+    },
 };
