@@ -14,9 +14,10 @@ let LoginForm = (props) => {
     return (
         <div className={c.formContainer}>
             <h1>Login</h1>
+
             <form className={c.formItem} onSubmit={props.handleSubmit}>
                 <div>
-                    <Field type="text"
+                    <Field type="email"
                            label="email"
                            validate={[required, maxLength30, minLength1]}
                            component={renderField}
@@ -39,6 +40,7 @@ let LoginForm = (props) => {
                 <div className={c.buttonContainer}>
                     <button>Submit</button>
                 </div>
+                {props.error && <span className={c.errorSpan}>{props.error}</span>}
             </form>
         </div>
     )

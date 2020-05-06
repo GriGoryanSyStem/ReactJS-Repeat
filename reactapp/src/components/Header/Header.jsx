@@ -15,17 +15,21 @@ const Header = (props) => {
                     <div className={c.loginUserName}>
                         {props.store.infoLogin.login
                             ? <div>{props.store.infoLogin.login}
-                            <button className={c.myButton}
-                            onClick={props.logOutThunk}>
-                                LogOut
-                            </button></div>
+                                <button className={c.myButton}
+                                        onClick={props.logOutThunk}>
+                                    LogOut
+                                </button>
+                            </div>
                             : <button className={c.myButton}>
                                 <NavLink to="/login">Login</NavLink>
                             </button>
                         }
                     </div>
                     <div className={c.loginImage}>
-                        <img src={photoPerson} alt="userPhoto"/>
+                        {!props.userImage
+                            ? <div><img src={photoPerson} alt="userPhoto"/></div>
+                            : <div><img src={props.userImage.photos.small} alt="userPhoto"/></div>
+                        }
                     </div>
                 </div>
             </div>

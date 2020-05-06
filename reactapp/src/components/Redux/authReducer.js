@@ -1,4 +1,5 @@
 import {usersAPI} from "../../api/api";
+import {stopSubmit} from "redux-form";
 
 let initialState = {
     infoLogin: {
@@ -40,10 +41,12 @@ export const loginThunk = (email,password,rememberMe) => (dispatch) => {
         if (data.resultCode === 0) {
             dispatch(authMeThunk());
         }
+        else{
+            dispatch(stopSubmit('login',{_error: data.messages.length > 0 ? data.messages[0] : 'Some is Wrong'}));
+        }
     });
 };
 export const logOutThunk = () => (dispatch) => {
-    alert('s')
     usersAPI.logOutApi().then(data => {
         if (data.resultCode === 0) {
             dispatch(setLoginAuthAC(null,null,null,false));

@@ -26,3 +26,9 @@
  .formItem{
 
  }
+.formError{
+    border: 1px solid red;
+}
+.errorSpan{
+    position: absolute;
+}
