@@ -5,6 +5,7 @@ import c from "./Header.module.css";
 import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
+    debugger
     return (
         <header className={c.header}>
             <div className={c.headerContainer}>
@@ -13,15 +14,15 @@ const Header = (props) => {
                 </div>
                 <div className={c.loginItem}>
                     <div className={c.loginUserName}>
-                        {props.store.infoLogin.login
-                            ? <div>{props.store.infoLogin.login}
+                        {props.infoLogin.login
+                            ? <div>{props.infoLogin.login}
                                 <button className={c.myButton}
                                         onClick={props.logOutThunk}>
                                     LogOut
                                 </button>
                             </div>
                             : <button className={c.myButton}>
-                                <NavLink to="/login">Login</NavLink>
+                                <NavLink to="login">Login</NavLink>
                             </button>
                         }
                     </div>

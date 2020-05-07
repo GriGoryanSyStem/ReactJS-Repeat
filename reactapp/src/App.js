@@ -12,24 +12,20 @@ import Login from "./components/Login/Login";
 import {connect} from "react-redux";
 import {authMeThunk} from "./components/Redux/authReducer";
 import {compose} from "redux";
-import Loader from "./components/Common/Loader";
 
 class App extends React.Component {
     componentDidMount() {
         this.props.authMeThunk();
     }
     render() {
-        if (!this.props.isAuth){
-            return <Loader/>
-        }
         return (
             <div className="appWrapper">
                 <HeaderContainer/>
                 <NavBar/>
                 <Route render={() => <ProfileContainer/>}
                        path="/profile/:userId?"/>
-                <Route render={() => <DialogsContainer/>}
-                       path="/dialogs"/>
+                <Route render={() => this.props.isAuth
+                    && <DialogsContainer/>} path="/dialogs"/>
                 <Route render={() => <UsersContainer/>} path="/users"/>
                 <Route component={Friend} path="/friends"/>
                 <Route component={Settings} path="/settings"/>
@@ -44,5 +40,6 @@ let mapStateToProps = (state) => {
         isAuth:state.authR.isAuth
     }
 };
+
 
 export default compose(withRouter,connect(mapStateToProps, {authMeThunk}))(App)
