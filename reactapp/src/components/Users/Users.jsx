@@ -5,6 +5,7 @@ import Loader from "../Common/Loader";
 import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
+    debugger
     let pages = [];
     let pagesCount = Math.ceil(props.usersReducer.totalUsersCount / props.usersReducer.pageSize);
     for (let i = 1; i <= pagesCount; i++) {

@@ -41,5 +41,4 @@ let mapStateToProps = (state) => {
     }
 };
 
-
 export default compose(withRouter,connect(mapStateToProps, {authMeThunk}))(App)

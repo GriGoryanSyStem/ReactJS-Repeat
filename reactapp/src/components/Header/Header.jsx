@@ -5,7 +5,6 @@ import c from "./Header.module.css";
 import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
-    debugger
     return (
         <header className={c.header}>
             <div className={c.headerContainer}>

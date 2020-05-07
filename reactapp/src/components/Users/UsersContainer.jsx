@@ -8,6 +8,7 @@ import {
     unFollowThunk
 } from "../Redux/usersReducer";
 import Users from "./Users";
+import {getUsersSelector} from "../Redux/users-selectors";
 
 
 class UsersApi extends React.Component {
@@ -27,6 +28,7 @@ class UsersApi extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
+        // users:getUsersSelector(state), //83 not used
         usersReducer: state.usersPageR,
     }
 };
