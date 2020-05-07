@@ -4,12 +4,13 @@ import ProfileInfo from "./PofileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPost/MyPostsContainer";
 
 class Profile extends React.Component {
+
     componentDidMount() {
-        if(!this.props.match.params.userId) {
-            this.props.match.params.userId = 6244;
+        if (this.props.isAuth) {
+            this.props.match.params.userId = this.props.userId;
         }
-        this.props.profileThunk(this.props.match.params.userId);
-        this.props.statusThunk(this.props.match.params.userId);
+        this.props.profileThunk(this.props.userId);
+        this.props.statusThunk(this.props.userId);
     }
     render() {
         return (

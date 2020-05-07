@@ -5,11 +5,11 @@ import {profileThunk, statusThunk, updateStatusThunk} from "../Redux/profileRedu
 import {redirectComponentHoc} from "../HOC/redirectComponentHoc";
 import Profile from "./Profile";
 
-
 let mapStateToProps = (state) => {
     return {
         profile: state.profilePageR.profile,
         status:state.profilePageR.status,
+        userId:state.authR.infoLogin.id,
         isAuth:state.authR.isAuth
     }
 };

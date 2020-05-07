@@ -20,13 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc575b0e-fda7-4f09-bc1e-4e4d06908bc9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Header/HeaderContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/login.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Validators/FormsControls.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Validators/FormsControls.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
