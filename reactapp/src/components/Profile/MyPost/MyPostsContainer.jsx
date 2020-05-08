@@ -1,10 +1,10 @@
-import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 import {onChangeAreaAC} from "../../Redux/profileReducer";
+import MyPosts from "./MyPosts";
 
 let mapStateToProps = (state) => {
     return {
-        profilePage: state.profilePageR,
+        postData: state.profilePageR.postData,
     }
 };
 

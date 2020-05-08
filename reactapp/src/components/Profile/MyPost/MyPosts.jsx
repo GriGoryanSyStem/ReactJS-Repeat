@@ -8,7 +8,7 @@ import {renderField} from "../../Validators/FormsControls";
 const maxLength15 = maxLength(15);
 const minLength1 = minLength(2);
 
-function MyPostAddPostForm(props) {
+const MyPosts = (props) => {
     let myHandleSubmit = (e) => {
         props.onChangeAreaAC(e.myPostText);
     }
@@ -28,7 +28,7 @@ function MyPostAddPostForm(props) {
                     <button>AddPost</button>
                 </div>
             </form>
-            {props.profilePage.postData.map((i, k) => {
+            {props.postData.map((i, k) => {
                 return (
                     <Post id={i.id} massage={i.massage} likes={i.likes} key={k}/>
                 )
@@ -37,4 +37,4 @@ function MyPostAddPostForm(props) {
     )
 }
 
-export default reduxForm({form: 'myPostMassage'})(MyPostAddPostForm);
+export default reduxForm({form: 'myPostMassage'})(React.memo(MyPosts));
