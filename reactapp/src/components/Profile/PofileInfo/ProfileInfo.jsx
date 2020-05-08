@@ -7,6 +7,10 @@ function ProfileInfo(props) {
     let [editMode,setEditMode] = useState(true);
     let [status,setStatus] = useState(props.status);
 
+    useEffect(()=>{
+        setStatus(props.status)
+    },[props.status]);
+
     let funcEditChange = () => {
         setEditMode(!editMode)
         props.updateStatusThunk(status)
