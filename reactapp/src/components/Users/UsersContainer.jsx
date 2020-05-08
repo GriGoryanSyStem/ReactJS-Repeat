@@ -8,7 +8,7 @@ import {
     unFollowThunk
 } from "../Redux/usersReducer";
 import Users from "./Users";
-import {getUsersSelector} from "../Redux/users-selectors";
+// import {getUsersSelector} from "../Redux/users-selectors";
 
 
 class UsersApi extends React.Component {

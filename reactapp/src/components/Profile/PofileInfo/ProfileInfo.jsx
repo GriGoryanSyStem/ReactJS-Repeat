@@ -1,68 +1,45 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import c from "../Profile.module.css";
 import Loader from "../../Common/Loader";
 import userImage from '../../../pictures/personUser.png';
 
-class ProfileInfo extends React.Component {
-    constructor(props) {
-        super(props);
+function ProfileInfo(props) {
+    let [editMode,setEditMode] = useState(true);
+    let [status,setStatus] = useState(props.status);
 
-        this.state = {
-            editMode: false,
-            status:this.props.status,
-        }
+    let funcEditChange = () => {
+        setEditMode(!editMode)
+        props.updateStatusThunk(status)
     }
-    changeStatus = () => {
-        this.setState({
-            editMode: !this.state.editMode
-        })
-        this.props.updateStatusThunk(this.state.status);
+    let funcStatusChange = (e) => {
+        setStatus(e.currentTarget.value)
     }
-    changeStatusText = (e) =>{
-        this.setState({
-            status:e.currentTarget.value
-        })
+    if (!props.profile) {
+        return <Loader/>
     }
-    componentDidUpdate(prevProps, prevState, snapshot) {
-       if (prevProps.status!==this.props.status){
-           this.setState({
-               status:this.props.status
-           })
-       }
-    }
-
-    render() {
-        if (!this.props.profile) {
-            return <Loader/>
-        }
-        return (
-            <div className={c.profileInfo}>
-                <h1>Profile Information</h1>
-                <div className={c.item}>
-                    <img src={!this.props.profile.photos.large ? userImage : this.props.profile.photos.large}
-                         alt="userPhoto"/>
-                    <div className={c.statusContainer}>
-                        {!this.state.editMode &&
+    return (
+        <div className={c.profileInfo}>
+            <h1>Profile Information</h1>
+            <div className={c.item}>
+                <img src={!props.profile.photos.large ? userImage : props.profile.photos.large}
+                     alt="userPhoto"/>
+                <div className={c.statusContainer}>
+                    {editMode &&
                         <div>
-                            <p onClick={this.changeStatus}>{this.props.status ? this.props.status : 'No Status'}</p>
+                            <p onClick={funcEditChange}>{props.status ? props.status : 'No Status'}</p>
                         </div>}
-                        {this.state.editMode &&
+                    {!editMode &&
                         <div>
-                            <input value={this.state.status}
-                                   onChange={this.changeStatusText}
-                                   autoFocus={true}
-                                   onBlur={this.changeStatus}
-                                   />
+                            <input autoFocus={true} onBlur={funcEditChange} onChange={funcStatusChange} value={status}/>
                         </div>}
-                    </div>
-                    <h2>{this.props.profile.fullName}</h2>
-                    <h3>{this.props.profile.userId}</h3>
-                    <h4>{this.props.profile.lookingForAJob}</h4>
-                    <h5>{this.props.profile.lookingForAJobDescription}</h5>
                 </div>
+                <h2>{props.profile.fullName}</h2>
+                <h3>{props.profile.userId}</h3>
+                <h4>{props.profile.lookingForAJob}</h4>
+                <h5>{props.profile.lookingForAJobDescription}</h5>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default ProfileInfo;
