@@ -5,7 +5,6 @@ import {logOutThunk} from "../Redux/authReducer";
 let mapStateToProps = (state) => {
     return {
         infoLogin: state.authR.infoLogin,
-        userImage: state.profilePageR.profile
     }
 };
 

@@ -3,29 +3,15 @@ import c from "./Users.module.css";
 import personImage from "../../pictures/personUser.png";
 import Loader from "../Common/Loader";
 import {NavLink} from "react-router-dom";
+import {Paginator} from "./Paginator";
 
 const Users = (props) => {
-    debugger
-    let pages = [];
-    let pagesCount = Math.ceil(props.usersReducer.totalUsersCount / props.usersReducer.pageSize);
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i);
-    }
     return (
         <div className={c.usersContainer}>
-            <div className={c.pagesContainer}>
-                {pages.map((i, k) => {
-                    return (
-                        <div key={k}>
-                            <button onClick={() => {props.clickButton(i)}}
-                                    className={props.usersReducer.currentPage === i
-                                        ? `${c.selected}  ${c.pageButton}`
-                                        : c.pageButton}>{i}
-                            </button>
-                        </div>
-                    )
-                })}
-            </div>
+            <Paginator totalUsersCount = {props.usersReducer.totalUsersCount}
+                       pageSize = {props.usersReducer.pageSize}
+                       currentPage = {props.usersReducer.currentPage}
+                       clickButton = {props.clickButton}/>
             <div className={c.allUsersContainer}>
                 {props.usersReducer.isLoading
                     ? <Loader/>

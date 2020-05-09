@@ -1,6 +1,5 @@
 import React from "react";
 import pic from "../../pictures/logo.svg";
-import photoPerson from '../../pictures/personUser.png'
 import c from "./Header.module.css";
 import {NavLink} from "react-router-dom";
 
@@ -23,12 +22,6 @@ const Header = (props) => {
                             : <button className={c.myButton}>
                                 <NavLink to="login">Login</NavLink>
                             </button>
-                        }
-                    </div>
-                    <div className={c.loginImage}>
-                        {!props.userImage
-                            ? <div><img src={photoPerson} alt="userPhoto"/></div>
-                            : <div><img src={props.userImage.photos.small} alt="userPhoto"/></div>
                         }
                     </div>
                 </div>

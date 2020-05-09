@@ -72,35 +72,27 @@ const usersReducer = (state = initialState, action) => {
     }
 };
 
-export const getUsersThunk = (currentPage = 1, pageSize) => {
-    return (dispatch) => {
-        dispatch(isLoadingAC(true));
-        usersAPI.getUsersApi(currentPage, pageSize).then(data => {
-            dispatch(isLoadingAC(false));
-            dispatch(clickPageAC(currentPage));
-            dispatch(setUsersAC(data.items, data.totalCount));
-        });
-    }
+export const getUsersThunk = (currentPage = 1, pageSize) => async (dispatch) => {
+    dispatch(isLoadingAC(true));
+    let data = await usersAPI.getUsersApi(currentPage, pageSize)
+    dispatch(isLoadingAC(false));
+    dispatch(clickPageAC(currentPage));
+    dispatch(setUsersAC(data.items, data.totalCount));
 };
-export const followThunk = (userId) => {
-    return (dispatch) => {
-        dispatch(isFollowingAC(true, userId));
-        usersAPI.unFollowApi(userId).then(data => {
-            data.resultCode === 0 &&
-            dispatch(followAC(false, userId));
-            dispatch(isFollowingAC(false, userId));
-        });
-    }
+
+export const followThunk = (userId) => async (dispatch) => {
+    dispatch(isFollowingAC(true, userId));
+    let data = await usersAPI.unFollowApi(userId)
+    data.resultCode === 0 &&
+    dispatch(followAC(false, userId));
+    dispatch(isFollowingAC(false, userId));
 };
-export const unFollowThunk = (userId) => {
-    return (dispatch) => {
-        dispatch(isFollowingAC(true, userId));
-        usersAPI.followApi(userId).then(data => {
-            data.resultCode === 0 &&
-            dispatch(followAC(true, userId));
-            dispatch(isFollowingAC(false, userId));
-        });
-    }
+export const unFollowThunk = (userId) => async (dispatch) => {
+    dispatch(isFollowingAC(true, userId));
+    let data = await usersAPI.followApi(userId)
+    data.resultCode === 0 &&
+    dispatch(followAC(true, userId));
+    dispatch(isFollowingAC(false, userId));
 };
 
 export default usersReducer;

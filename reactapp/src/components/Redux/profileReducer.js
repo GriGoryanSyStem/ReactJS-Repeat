@@ -1,4 +1,4 @@
-import {usersAPI} from "../../api/api";
+import {profileAPI} from "../../api/api";
 
 let initialState = {
     postData: [
@@ -7,7 +7,7 @@ let initialState = {
         {id: 3, massage: 'My name is Props', likes: 90},
     ],
     profile: null,
-    status:''
+    status: ''
 };
 
 const setUserProfileAC = (profile) => ({
@@ -20,7 +20,7 @@ const getStatusProfileAC = (textStatus) => ({
 });
 export const onChangeAreaAC = (newProfilePost) => ({
     type: 'ADD_POST',
-    newPost:newProfilePost
+    newPost: newProfilePost
 });
 
 const profileReducer = (state = initialState, action) => {
@@ -35,7 +35,7 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 profile: action.profile
             };
-            case "GET_STATUS_PROFILE":
+        case "GET_STATUS_PROFILE":
             return {
                 ...state,
                 status: action.status
@@ -46,26 +46,24 @@ const profileReducer = (state = initialState, action) => {
 };
 
 export const profileThunk = (userId) => {
-    return (dispatch) => {
-        usersAPI.getProfileApi(userId).then(data => {
-            dispatch(setUserProfileAC(data))
-        });
+    return async (dispatch) => {
+        let data = await profileAPI.getProfileApi(userId)
+        dispatch(setUserProfileAC(data))
     }
 };
+
 export const statusThunk = (userId) => {
-    return (dispatch) => {
-        usersAPI.getStatusApi(userId).then(data => {
-            dispatch(getStatusProfileAC(data))
-        });
+    return async (dispatch) => {
+        let data = await profileAPI.getStatusApi(userId)
+        dispatch(getStatusProfileAC(data))
     }
 };
 export const updateStatusThunk = (status) => {
-    return (dispatch) => {
-        usersAPI.updateStatusApi(status).then(data => {
-            if (data.resultCode === 0){
-                dispatch(getStatusProfileAC(status))
-            }
-        });
+    return async (dispatch) => {
+        let data = await profileAPI.updateStatusApi(status)
+        if (data.resultCode === 0) {
+            dispatch(getStatusProfileAC(status))
+        }
     }
 };
 

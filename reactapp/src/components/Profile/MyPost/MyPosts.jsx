@@ -28,7 +28,7 @@ const MyPosts = (props) => {
                     <button>AddPost</button>
                 </div>
             </form>
-            {props.postData.map((i, k) => {
+            {[...props.postData].reverse().map((i, k) => {
                 return (
                     <Post id={i.id} massage={i.massage} likes={i.likes} key={k}/>
                 )

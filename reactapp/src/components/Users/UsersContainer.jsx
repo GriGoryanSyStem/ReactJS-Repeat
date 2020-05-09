@@ -15,7 +15,6 @@ class UsersApi extends React.Component {
     componentDidMount() {
         this.props.getUsersThunk(this.props.currentPage,this.props.pageSize);
     }
-
     clickButton = (pagNumber) => {
         this.props.getUsersThunk(pagNumber,this.props.pageSize);
     };

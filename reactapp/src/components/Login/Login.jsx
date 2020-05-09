@@ -14,7 +14,6 @@ let LoginForm = (props) => {
     return (
         <div className={c.formContainer}>
             <h1>Login</h1>
-
             <form className={c.formItem} onSubmit={props.handleSubmit}>
                 <div>
                     <Field type="email"
@@ -63,7 +62,6 @@ const mapStateToProps = (state) => {
         isAuth:state.authR.isAuth
     }
 };
-
 
 let LoginFormRedux = reduxForm({form: 'login'})(LoginForm);
 export default connect(mapStateToProps, {loginThunk})(Login)

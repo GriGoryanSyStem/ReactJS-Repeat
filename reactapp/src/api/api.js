@@ -6,28 +6,48 @@ let instance = axios.create({
     withCredentials: true
 });
 
-export const usersAPI = {
-// --------------------------- Profile Page -------------------------
-    getProfileApi(userId){
+export const authAPI = {
+    authMeApi() {
+        return instance.get(`/auth/me`)
+            .then(response => {
+                return response.data
+            });
+    },
+    loginApi(email, password, rememberMe = false) {
+        return instance.post(`/auth/login`, {email, password, rememberMe})
+            .then(response => {
+                return response.data
+            });
+    },
+    logOutApi() {
+        return instance.delete(`/auth/login`)
+            .then(response => {
+                return response.data
+            });
+    },
+}
+
+export const profileAPI = {
+    getProfileApi(userId) {
         return instance.get(`/profile/${userId}`)
             .then(response => {
                 return response.data
             });
     },
-    getStatusApi(userId){
+    getStatusApi(userId) {
         return instance.get(`/profile/status/${userId}`)
             .then(response => {
                 return response.data
             });
     },
-    updateStatusApi(status){
-        return instance.put(`/profile/status`, {status:status})
+    updateStatusApi(status) {
+        return instance.put(`/profile/status`, {status: status})
             .then(response => {
                 return response.data
             });
     },
-
-// --------------------------- Users Page -------------------------
+}
+export const usersAPI = {
     getUsersApi(currentPage = 1, pageSize = 20) {
         return instance.get(`/users?page=${currentPage}&count=${pageSize}`)
             .then(response => {
@@ -46,23 +66,6 @@ export const usersAPI = {
                 return response.data
             });
     },
-// --------------------------- Auth -------------------------
-    authMeApi(){
-        return instance.get(`/auth/me`)
-            .then(response => {
-                return response.data
-            });
-    },
-    loginApi(email,password,rememberMe = false){
-        return instance.post(`/auth/login`,{email,password,rememberMe})
-            .then(response => {
-                return response.data
-            });
-    },
-    logOutApi(){
-        return instance.delete(`/auth/login`)
-            .then(response => {
-                return response.data
-            });
-    },
 };
+
+
