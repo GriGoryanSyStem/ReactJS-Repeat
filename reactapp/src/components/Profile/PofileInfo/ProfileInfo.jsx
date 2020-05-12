@@ -11,10 +11,13 @@ function ProfileInfo(props) {
         setStatus(props.status)
     },[props.status]);
 
-    let funcEditChange = () => {
+    let funcEditChange = (e) => {
         setEditMode(!editMode)
-        props.updateStatusThunk(status)
+        if (props.profile.userId === props.id){
+            props.updateStatusThunk(status)
+        }
     }
+
     let funcStatusChange = (e) => {
         setStatus(e.currentTarget.value)
     }
