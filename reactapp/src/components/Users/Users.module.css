@@ -126,3 +126,6 @@
     -webkit-box-orient: vertical;
 }
 
+.hideMeNow{
+    visibility: hidden;
+}

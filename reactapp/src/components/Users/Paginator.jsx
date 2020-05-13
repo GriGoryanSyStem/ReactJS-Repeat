@@ -17,25 +17,24 @@ export const Paginator = (props) => {
 
     return (
         <div className={c.pagesContainer}>
-            {portionNumber > 1 &&
-            <button onClick={() => {
+            <button className={portionNumber > 1 ? '' : `${c.hideMeNow}`} onClick={() => {
                 setPortionNumber(portionNumber - 1)
-            }}>PREV</button>}
-            {
-                pages.filter(i => i >= leftPortionPageNumber && i <= rightPortionPageNumber)
-                    .map((i, k) => {
-                        return (
-                            <div key={k}>
-                                <button onClick={() => {
-                                    props.clickButton(i)
-                                }}
-                                        className={props.currentPage === i
-                                            ? `${c.selected}  ${c.pageButton}`
-                                            : c.pageButton}>{i}
-                                </button>
-                            </div>
-                        )
-                    })}
+            }}>PREV
+            </button>
+            {pages.filter(i => i >= leftPortionPageNumber && i <= rightPortionPageNumber)
+                .map((i, k) => {
+                    return (
+                        <div key={k}>
+                            <button onClick={() => {
+                                props.clickButton(i)
+                            }}
+                                    className={props.currentPage === i
+                                        ? `${c.selected}  ${c.pageButton}`
+                                        : c.pageButton}>{i}
+                            </button>
+                        </div>
+                    )
+                })}
             {portionCount > portionNumber &&
             <button onClick={() => {
                 setPortionNumber(portionNumber + 1)
