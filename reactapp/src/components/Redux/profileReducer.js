@@ -22,6 +22,10 @@ export const onChangeAreaAC = (newProfilePost) => ({
     type: 'ADD_POST',
     newPost: newProfilePost
 });
+export const updateProfilePhotos = (photos) => ({
+    type: 'UPDATE_PHOTO',
+    photos:photos
+});
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -39,6 +43,11 @@ const profileReducer = (state = initialState, action) => {
             return {
                 ...state,
                 status: action.status
+            };
+        case "UPDATE_PHOTO":
+            return {
+                ...state,
+                profile: {...state.profile, photos:action.photos}
             };
         default:
             return state;
@@ -63,6 +72,14 @@ export const updateStatusThunk = (status) => {
         let data = await profileAPI.updateStatusApi(status)
         if (data.resultCode === 0) {
             dispatch(getStatusProfileAC(status))
+        }
+    }
+};
+export const sendNewPhotoThunk = (file) => {
+    return async (dispatch) => {
+        let data = await profileAPI.sendPhotoApi(file)
+        if (data.resultCode === 0) {
+            dispatch(updateProfilePhotos(data.data.photos))
         }
     }
 };

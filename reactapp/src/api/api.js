@@ -46,7 +46,21 @@ export const profileAPI = {
                 return response.data
             });
     },
+    sendPhotoApi(file) {
+        let formData = new FormData();
+        formData.append('image', file)
+        return instance.put(`/profile/photo`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+        )
+            .then(response => {
+                return response.data
+            });
+    },
 }
+
 export const usersAPI = {
     getUsersApi(currentPage = 1, pageSize = 20) {
         return instance.get(`/users?page=${currentPage}&count=${pageSize}`)

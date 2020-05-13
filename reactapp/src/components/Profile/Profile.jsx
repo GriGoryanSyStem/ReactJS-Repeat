@@ -9,8 +9,10 @@ function Profile(props) {
             <div className={c.content}>
                 <ProfileInfo profile={props.profile}
                              status={props.status}
+                             id={props.id}
                              updateStatusThunk={props.updateStatusThunk}
-                             id={props.id}/>
+                             sendNewPhotoThunk={props.sendNewPhotoThunk}
+                />
                 <MyPostsContainer/>
             </div>
         </div>

@@ -4,16 +4,16 @@ import Loader from "../../Common/Loader";
 import userImage from '../../../pictures/personUser.png';
 
 function ProfileInfo(props) {
-    let [editMode,setEditMode] = useState(true);
-    let [status,setStatus] = useState(props.status);
+    let [editMode, setEditMode] = useState(true);
+    let [status, setStatus] = useState(props.status);
 
-    useEffect(()=>{
+    useEffect(() => {
         setStatus(props.status)
-    },[props.status]);
+    }, [props.status]);
 
-    let funcEditChange = (e) => {
+    let funcEditChange = () => {
         setEditMode(!editMode)
-        if (props.profile.userId === props.id){
+        if (props.profile.userId === props.id) {
             props.updateStatusThunk(status)
         }
     }
@@ -21,6 +21,13 @@ function ProfileInfo(props) {
     let funcStatusChange = (e) => {
         setStatus(e.currentTarget.value)
     }
+
+    let selectMyPhoto = (e) => {
+        if (e.target.files || e.target.files.length !== 0){
+            props.sendNewPhotoThunk(e.target.files[0]);
+        }
+    }
+
     if (!props.profile) {
         return <Loader/>
     }
@@ -28,17 +35,17 @@ function ProfileInfo(props) {
         <div className={c.profileInfo}>
             <h1>Profile Information</h1>
             <div className={c.item}>
-                <img src={!props.profile.photos.large ? userImage : props.profile.photos.large}
-                     alt="userPhoto"/>
+                <img src={!props.profile.photos.large ? userImage : props.profile.photos.large} alt="userPhoto"/>
+                {props.profile.userId === props.id && <input type={"file"} onChange={selectMyPhoto}/>}
                 <div className={c.statusContainer}>
                     {editMode &&
-                        <div>
-                            <p onClick={funcEditChange}>{props.status ? props.status : 'No Status'}</p>
-                        </div>}
+                    <div>
+                        <p onClick={funcEditChange}>{props.status ? props.status : 'No Status'}</p>
+                    </div>}
                     {!editMode &&
-                        <div>
-                            <input autoFocus={true} onBlur={funcEditChange} onChange={funcStatusChange} value={status}/>
-                        </div>}
+                    <div>
+                        <input autoFocus={true} onBlur={funcEditChange} onChange={funcStatusChange} value={status}/>
+                    </div>}
                 </div>
                 <h2>{props.profile.fullName}</h2>
                 <h3>{props.profile.userId}</h3>
