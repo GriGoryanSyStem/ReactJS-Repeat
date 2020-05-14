@@ -13,10 +13,10 @@ import Users from "./Users";
 
 class UsersApi extends React.Component {
     componentDidMount() {
-        this.props.getUsersThunk(this.props.currentPage,this.props.pageSize);
+        this.props.getUsersThunk(this.props.currentPage,this.props.pageSize,null);
     }
     clickButton = (pagNumber) => {
-        this.props.getUsersThunk(pagNumber,this.props.pageSize);
+        this.props.getUsersThunk(pagNumber,this.props.pageSize,null);
     };
     render() {
         return (

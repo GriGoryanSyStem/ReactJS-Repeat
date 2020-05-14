@@ -12,13 +12,13 @@
 
 .usersContainer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: flex-end;
     flex-wrap: wrap;
 }
 
 .userItem {
-    width: 18%;
+    width: 16vw;
     background: #1999ec;
     overflow: hidden;
     margin: 3px;

@@ -19,7 +19,9 @@ function ProfileInfo(props) {
     }
 
     let funcStatusChange = (e) => {
-        setStatus(e.currentTarget.value)
+        if(props.profile.userId === props.id){
+            setStatus(e.currentTarget.value)
+        }
     }
 
     let selectMyPhoto = (e) => {
@@ -35,7 +37,7 @@ function ProfileInfo(props) {
         <div className={c.profileInfo}>
             <h1>Profile Information</h1>
             <div className={c.item}>
-                <img src={!props.profile.photos.large ? userImage : props.profile.photos.large} alt="userPhoto"/>
+                <img src={props.profile.photos.large || userImage} alt="userPhoto"/>
                 {props.profile.userId === props.id && <input type={"file"} onChange={selectMyPhoto}/>}
                 <div className={c.statusContainer}>
                     {editMode &&

@@ -31,6 +31,7 @@ const isFollowingAC = (following, userId) => ({
     userId: userId
 });
 
+
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case "FOLLOWED":
@@ -72,9 +73,9 @@ const usersReducer = (state = initialState, action) => {
     }
 };
 
-export const getUsersThunk = (currentPage = 1, pageSize) => async (dispatch) => {
+export const getUsersThunk = (currentPage = 1, pageSize = 20, friendsPage = null) => async (dispatch) => {
     dispatch(isLoadingAC(true));
-    let data = await usersAPI.getUsersApi(currentPage, pageSize)
+    let data = await usersAPI.getUsersApi(currentPage, pageSize,friendsPage)
     dispatch(isLoadingAC(false));
     dispatch(clickPageAC(currentPage));
     dispatch(setUsersAC(data.items, data.totalCount));

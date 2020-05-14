@@ -8,10 +8,6 @@ import {Paginator} from "./Paginator";
 const Users = (props) => {
     return (
         <div className={c.usersContainer}>
-            <Paginator totalUsersCount = {props.usersReducer.totalUsersCount}
-                       pageSize = {props.usersReducer.pageSize}
-                       currentPage = {props.usersReducer.currentPage}
-                       clickButton = {props.clickButton}/>
             <div className={c.allUsersContainer}>
                 {props.usersReducer.isLoading
                     ? <Loader/>
@@ -44,6 +40,12 @@ const Users = (props) => {
                             </div>
                         )
                     })}
+            </div>
+            <div>
+                <Paginator totalUsersCount={props.usersReducer.totalUsersCount}
+                           pageSize={props.usersReducer.pageSize}
+                           currentPage={props.usersReducer.currentPage}
+                           clickButton={props.clickButton}/>
             </div>
         </div>
     )

@@ -62,8 +62,8 @@ export const profileAPI = {
 }
 
 export const usersAPI = {
-    getUsersApi(currentPage = 1, pageSize = 20) {
-        return instance.get(`/users?page=${currentPage}&count=${pageSize}`)
+    getUsersApi(currentPage, pageSize, friendsPage) {
+        return instance.get(`/users?page=${currentPage}&count=${pageSize}&friend=${friendsPage}`)
             .then(response => {
                 return response.data
             });

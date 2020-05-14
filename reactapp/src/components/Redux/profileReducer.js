@@ -24,7 +24,7 @@ export const onChangeAreaAC = (newProfilePost) => ({
 });
 export const updateProfilePhotos = (photos) => ({
     type: 'UPDATE_PHOTO',
-    photos:photos
+    photos: photos
 });
 
 const profileReducer = (state = initialState, action) => {
@@ -47,7 +47,7 @@ const profileReducer = (state = initialState, action) => {
         case "UPDATE_PHOTO":
             return {
                 ...state,
-                profile: {...state.profile, photos:action.photos}
+                profile: {...state.profile, photos: action.photos}
             };
         default:
             return state;

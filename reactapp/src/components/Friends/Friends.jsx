@@ -1,11 +1,9 @@
 import React from "react";
-import c from './Friend.module.css';
+import Users from "../Users/Users";
 
-const Friend = () => {
-    return(
-        <div className={c.friendCont}>
-            <h3>Add Follow Friends Create by himself</h3>
-        </div>
+const Friends = (props) => {
+    return (
+        <Users {...props}/>
     )
 };
-export default Friend;
+export default Friends;

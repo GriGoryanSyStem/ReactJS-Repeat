@@ -43,7 +43,8 @@ let mapStateToProps = (state) => {
     }
 };
 
-export default compose(withRouter,
+export default compose(
+    withRouter,
     connect(mapStateToProps, {profileThunk, statusThunk, updateStatusThunk,sendNewPhotoThunk}),
     redirectComponentHoc)(ProfileContainer);
 
