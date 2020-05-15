@@ -9,9 +9,9 @@ import HeaderContainer from "./components/Header/HeaderContainer";
 import NavBar from "./components/NavBar/NavBar";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import Settings from "./components/Settings/Settings";
 import Loader from "./components/Common/Loader";
 import FriendsComponent from "./components/Friends/FriendsComponent";
+import SettingsContainer from "./components/Settings/SettingsContainer";
 
 const UsersContainer = React.lazy(() => import("./components/Users/UsersContainer"));
 
@@ -33,7 +33,7 @@ class App extends React.Component {
                 <Route render={() =><UsersContainer/>} path="/users"/>
                 </Suspense>
                 <Route  render={() =><FriendsComponent/>} path="/friends"/>
-                <Route component={Settings} path="/settings"/>
+                <Route component={SettingsContainer} path="/settings"/>
                 <Route render={() => <Login/>} path="/login"/>
 
             </div>

@@ -19,13 +19,13 @@ function ProfileInfo(props) {
     }
 
     let funcStatusChange = (e) => {
-        if(props.profile.userId === props.id){
+        if (props.profile.userId === props.id) {
             setStatus(e.currentTarget.value)
         }
     }
 
     let selectMyPhoto = (e) => {
-        if (e.target.files || e.target.files.length !== 0){
+        if (e.target.files || e.target.files.length !== 0) {
             props.sendNewPhotoThunk(e.target.files[0]);
         }
     }
@@ -37,22 +37,28 @@ function ProfileInfo(props) {
         <div className={c.profileInfo}>
             <h1>Profile Information</h1>
             <div className={c.item}>
-                <img src={props.profile.photos.large || userImage} alt="userPhoto"/>
-                {props.profile.userId === props.id && <input type={"file"} onChange={selectMyPhoto}/>}
+                <div><img src={props.photosLarge || userImage} alt="userPhoto"/></div>
+                <div><h4>{props.aboutMe}</h4></div>
+                <div> {props.profile.userId === props.id && <input type={"file"} onChange={selectMyPhoto}/>}</div>
                 <div className={c.statusContainer}>
-                    {editMode &&
-                    <div>
+                    {editMode && <div>
                         <p onClick={funcEditChange}>{props.status ? props.status : 'No Status'}</p>
                     </div>}
-                    {!editMode &&
-                    <div>
+                    {!editMode && <div>
                         <input autoFocus={true} onBlur={funcEditChange} onChange={funcStatusChange} value={status}/>
                     </div>}
                 </div>
-                <h2>{props.profile.fullName}</h2>
-                <h3>{props.profile.userId}</h3>
-                <h4>{props.profile.lookingForAJob}</h4>
-                <h5>{props.profile.lookingForAJobDescription}</h5>
+                <div>Full Name :<h2> {props.profile.fullName}</h2></div>
+                <div>User ID : <h3> {props.profile.userId}</h3></div>
+                <div>Looking For a Job :<h3>  {props.lookingForAJob ? 'Yes' : 'No'}</h3></div>
+                <div>Description :<h3>  {props.lookingForAJobDescription}</h3></div>
+                {Object.keys(props.contacts).map((keyName, i) => (
+                    <div key={i}>
+                        {props.contacts[keyName] &&
+                            <span> {keyName.toLocaleUpperCase()} : {props.contacts[keyName].split('https://')}</span>
+                        }
+                    </div>
+                ))}
             </div>
         </div>
     )

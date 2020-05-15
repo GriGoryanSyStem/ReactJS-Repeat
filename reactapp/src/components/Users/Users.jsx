@@ -6,6 +6,7 @@ import {NavLink} from "react-router-dom";
 import {Paginator} from "./Paginator";
 
 const Users = (props) => {
+
     return (
         <div className={c.usersContainer}>
             <div className={c.allUsersContainer}>

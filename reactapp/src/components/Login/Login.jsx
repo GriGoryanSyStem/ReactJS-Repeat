@@ -1,14 +1,14 @@
 import React from "react";
-import c from './login.module.css';
 import {Field, reduxForm} from "redux-form";
 import {renderField} from "../Validators/FormsControls";
 import {maxLength, minLength, required} from "../Validators/validators";
 import {connect} from "react-redux";
-import {loginThunk} from "../Redux/authReducer";
 import {Redirect} from "react-router-dom";
+import c from './login.module.css';
+import {loginThunk} from "../Redux/authReducer";
 
 const maxLength30 = maxLength(30);
-const minLength1 = minLength(2);
+const minLength2 = minLength(2);
 
 let LoginForm = (props) => {
     return (
@@ -18,14 +18,14 @@ let LoginForm = (props) => {
                 <div>
                     <Field type="email"
                            label="email"
-                           validate={[required, maxLength30, minLength1]}
+                           validate={[required, maxLength30, minLength2]}
                            component={renderField}
                            name={'myEmail'}/>
                 </div>
                 <div>
                     <Field type="password"
                            label="password"
-                           validate={[required, maxLength30, minLength1]}
+                           validate={[required, maxLength30, minLength2]}
                            component={renderField}
                            name={'myPassword'}
                     />
@@ -44,22 +44,22 @@ let LoginForm = (props) => {
         </div>
     )
 }
-
 let Login = (props) => {
     let myHandleSubmit = (e) => {
         props.loginThunk(e.myEmail, e.myPassword, e.myRememberMe)
     }
-   if(props.isAuth){
-       return <Redirect to={'/profile'}/>
-   }
+    if (props.isAuth) {
+        return <Redirect to={'/profile'}/>
+    }
     return <div className={c.loginContainer}>
         <LoginFormRedux onSubmit={myHandleSubmit}/>
     </div>
 }
 
+
 const mapStateToProps = (state) => {
     return {
-        isAuth:state.authR.isAuth
+        isAuth: state.authR.isAuth
     }
 };
 

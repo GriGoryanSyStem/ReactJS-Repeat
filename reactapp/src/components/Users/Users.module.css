@@ -95,7 +95,10 @@
 
 .selected {
     font-weight: bold;
-    background: #afe2139e;
+    background: #0f7fcd;
+    color: white;
+    width: 32px;
+    height: 24px;
 }
 
 .pagesContainer button {

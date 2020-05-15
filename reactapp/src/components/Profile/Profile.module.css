@@ -17,16 +17,16 @@
  }
 .item{
     color: white;
-    width: 200px;
 }
 .item img{
-    width: 100%;
+    width: 200px;
 }
 /*--------------------------MyPosts-------------------------*/
 .myPostCont{
     background: #b3e6ff;
     color: rgba(54, 54, 54, 0.79);
     padding: 5px;
+    border-radius: 2px;
 }
 .addPostBtn{
     margin: 5px;
@@ -45,7 +45,9 @@
     color: white;
     padding: 5px;
     margin-bottom: 10px;
+    border-radius: 2px;
 }
 .statusContainer{
-    background-color: #0062a7
+    background-color: #0062a7;
+    width: 200px;
 }

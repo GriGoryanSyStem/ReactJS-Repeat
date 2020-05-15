@@ -83,5 +83,13 @@ export const sendNewPhotoThunk = (file) => {
         }
     }
 };
+export const sendProfileFormThunk = (profileForm) => {
+    return async (dispatch) => {
+        let data = await profileAPI.sendProfileFormApi(profileForm)
+        if (data.resultCode === 0) {
+            // dispatch(getStatusProfileAC(data))
+        }
+    }
+};
 
 export default profileReducer;

@@ -59,6 +59,13 @@ export const profileAPI = {
                 return response.data
             });
     },
+
+    sendProfileFormApi(profileForm) {
+        return instance.put(`/profile`, profileForm) // !!!error!!! put(`/profile`, {profileForm})
+            .then(response => {
+                return response.data
+            });
+    },
 }
 
 export const usersAPI = {
