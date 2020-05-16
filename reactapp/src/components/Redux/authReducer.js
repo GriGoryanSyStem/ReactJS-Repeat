@@ -7,7 +7,8 @@ let initialState = {
         login: null,
         email: null,
     },
-    isAuth: false
+    isAuth: false,
+    captchaUrl : null
 };
 
 export const setLoginAuthAC = (id, login, email, isAuth) => ({
@@ -15,16 +16,26 @@ export const setLoginAuthAC = (id, login, email, isAuth) => ({
     payload: {id: id, login: login, email: email},
     isAuth: isAuth
 });
+export const getCaptchaAC = (captcha) => ({
+    type: 'GET_CAPTCHA',
+    payload: {captcha},
+});
 
 const auth = (state = initialState, action) => {
-    if (action.type === "SET_LOGIN_AUTH") {
-        return {
-            ...state,
-            infoLogin: {...action.payload},
-            isAuth: action.isAuth
-        };
-    } else {
-        return state;
+    switch (action.type) {
+        case "SET_LOGIN_AUTH":
+            return {
+                ...state,
+                infoLogin: {...action.payload},
+                isAuth: action.isAuth
+            };
+        case "GET_CAPTCHA":
+            return {
+                ...state,
+                captchaUrl: action.payload
+            };
+        default:
+            return state;
     }
 };
 
@@ -35,11 +46,14 @@ export const authMeThunk = () => async (dispatch) => {
         dispatch(setLoginAuthAC(id, login, email, true));
     }
 };
-export const loginThunk = (email, password, rememberMe) => async (dispatch) => {
-    let data = await authAPI.loginApi(email, password, rememberMe);
+export const loginThunk = (email, password, rememberMe, captcha) => async (dispatch) => {
+    let data = await authAPI.loginApi(email, password, rememberMe, captcha);
     if (data.resultCode === 0) {
         dispatch(authMeThunk());
     } else {
+        if (data.resultCode === 10){
+            dispatch(SecurityThunk())
+        }
         dispatch(stopSubmit('login', {_error: data.messages.length > 0 ? data.messages[0] : 'Some is Wrong'}));
     }
 };
@@ -48,6 +62,10 @@ export const logOutThunk = () => async (dispatch) => {
     if (data.resultCode === 0) {
         dispatch(setLoginAuthAC(null, null, null, false));
     }
+};
+export const SecurityThunk = () => async (dispatch) => {
+    let data = await authAPI.captchaApi()
+        dispatch(getCaptchaAC(data.url));
 };
 
 export default auth;

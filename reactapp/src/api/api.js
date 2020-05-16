@@ -13,9 +13,10 @@ export const authAPI = {
                 return response.data
             });
     },
-    loginApi(email, password, rememberMe = false) {
-        return instance.post(`/auth/login`, {email, password, rememberMe})
+    loginApi(email, password, rememberMe = false, captcha) {
+        return instance.post(`/auth/login`, {email, password, rememberMe, captcha})
             .then(response => {
+
                 return response.data
             });
     },
@@ -25,6 +26,13 @@ export const authAPI = {
                 return response.data
             });
     },
+    captchaApi() {
+        return instance.get(`/security/get-captcha-url`)
+            .then(response => {
+                return response.data
+            });
+    },
+
 }
 
 export const profileAPI = {

@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc575b0e-fda7-4f09-bc1e-4e4d06908bc9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Header/HeaderContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/authReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -63,10 +63,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/reactapp/src/components/Settings" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\GitHub\ReactJS-Repeat\reactapp\src\components\Settings" />
+      <recent name="C:\Users\User\Desktop\GitHub\ReactJS-Repeat\reactapp\src\components\Friends" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -91,7 +98,11 @@
       <workItem from="1588321010252" duration="1954000" />
       <workItem from="1588330128777" duration="1377000" />
       <workItem from="1588338642254" duration="33253000" />
-      <workItem from="1588870433849" duration="5389000" />
+      <workItem from="1588870433849" duration="31120000" />
+      <workItem from="1589231671744" duration="9613000" />
+      <workItem from="1589389218842" duration="10902000" />
+      <workItem from="1589450217950" duration="13678000" />
+      <workItem from="1589537025926" duration="25202000" />
     </task>
     <servers />
   </component>
@@ -115,34 +126,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588321915560" />
-    <state x="1154" y="275" key="FileChooserDialogImpl" timestamp="1588699199211">
+    <state x="1154" y="275" key="FileChooserDialogImpl" timestamp="1589573262089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1154" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588699199211" />
-    <state width="901" height="276" key="GridCell.Tab.0.bottom" timestamp="1588870837580">
+    <state x="1154" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589573262089" />
+    <state width="914" height="274" key="GridCell.Tab.0.bottom" timestamp="1589537033776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588870837580" />
-    <state width="901" height="276" key="GridCell.Tab.0.center" timestamp="1588870837580">
+    <state width="914" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589537033776" />
+    <state width="914" height="274" key="GridCell.Tab.0.center" timestamp="1589537033776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588870837580" />
-    <state width="901" height="276" key="GridCell.Tab.0.left" timestamp="1588870837580">
+    <state width="914" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589537033776" />
+    <state width="914" height="274" key="GridCell.Tab.0.left" timestamp="1589537033776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588870837580" />
-    <state width="901" height="276" key="GridCell.Tab.0.right" timestamp="1588870837580">
+    <state width="914" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589537033776" />
+    <state width="914" height="274" key="GridCell.Tab.0.right" timestamp="1589537033776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588870837580" />
+    <state width="914" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589537033776" />
     <state x="922" y="168" key="SettingsEditor" timestamp="1588699200262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588699200262" />
-    <state x="1156" y="136" width="585" height="801" key="find.popup" timestamp="1588410431704">
+    <state x="1156" y="136" width="585" height="801" key="find.popup" timestamp="1589048281480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1156" y="136" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588410431704" />
+    <state x="1156" y="136" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589048281480" />
     <state x="1096" y="242" key="run.anything.popup" timestamp="1588344156376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
