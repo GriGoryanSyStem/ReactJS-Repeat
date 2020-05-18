@@ -16,9 +16,9 @@ export const setLoginAuthAC = (id, login, email, isAuth) => ({
     payload: {id: id, login: login, email: email},
     isAuth: isAuth
 });
-export const getCaptchaAC = (captcha) => ({
+export const getCaptchaAC = (url) => ({
     type: 'GET_CAPTCHA',
-    payload: {captcha},
+    payload: {url},
 });
 
 const auth = (state = initialState, action) => {

@@ -1,5 +1,5 @@
 import React, {Suspense} from "react";
-import {Route, withRouter} from "react-router-dom";
+import {Redirect, Route, Switch, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {authMeThunk} from "./components/Redux/authReducer";
 import {compose} from "redux";
@@ -19,23 +19,25 @@ class App extends React.Component {
     componentDidMount() {
         this.props.authMeThunk();
     }
+
     render() {
         return (
             <div className="appWrapper">
-
                 <HeaderContainer/>
                 <NavBar/>
+                <Switch>
+                    <Redirect from="/" to="/profile"/> внутри Switch
+                </Switch>
                 <Route render={() => <ProfileContainer/>}
                        path="/profile/:userId?"/>
                 <Route render={() => this.props.isAuth
                     && <DialogsContainer/>} path="/dialogs"/>
                 <Suspense fallback={<Loader/>}>
-                <Route render={() =><UsersContainer/>} path="/users"/>
+                    <Route render={() => <UsersContainer/>} path="/users"/>
+                    <Route render={() => <FriendsComponent/>} path="/friends"/>
                 </Suspense>
-                <Route  render={() =><FriendsComponent/>} path="/friends"/>
                 <Route component={SettingsContainer} path="/settings"/>
                 <Route render={() => <Login/>} path="/login"/>
-
             </div>
         );
     }
@@ -43,8 +45,8 @@ class App extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        isAuth:state.authR.isAuth
+        isAuth: state.authR.isAuth
     }
 };
 
-export default compose(withRouter,connect(mapStateToProps, {authMeThunk}))(App)
+export default compose(withRouter, connect(mapStateToProps, {authMeThunk}))(App)

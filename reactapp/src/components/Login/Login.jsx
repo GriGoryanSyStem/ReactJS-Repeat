@@ -43,12 +43,12 @@ let LoginForm = (props) => {
                     {props.error && <span className={c.errorSpan}>{props.error}</span>}
                 </div>
                 <div>
-                {props.captchaUrl && <Field type="text"
-                                            validate={[required, maxLength30, minLength2]}
-                                            component={renderField}
-                                            name={'captcha'}
-                />}
-                {props.captchaUrl && <img src = {props.captchaUrl.url} alt="captchaUrl"/>}
+                    {props.captchaUrl && <Field type="text"
+                                                validate={[required, maxLength30, minLength2]}
+                                                component={renderField}
+                                                name={'captcha'}
+                    />}
+                    {props.captchaUrl && <img src={props.captchaUrl.url} alt="captchaUrl"/>}
                 </div>
             </form>
         </div>
@@ -62,7 +62,7 @@ let Login = (props) => {
         return <Redirect to={'/profile'}/>
     }
     return <div className={c.loginContainer}>
-        <LoginFormRedux onSubmit={myHandleSubmit} captchaUrl = {props.captchaUrl}/>
+        <LoginFormRedux onSubmit={myHandleSubmit} captchaUrl={props.captchaUrl}/>
     </div>
 }
 
