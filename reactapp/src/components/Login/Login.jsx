@@ -66,7 +66,6 @@ let Login = (props) => {
     </div>
 }
 
-
 const mapStateToProps = (state) => {
     return {
         isAuth: state.authR.isAuth,

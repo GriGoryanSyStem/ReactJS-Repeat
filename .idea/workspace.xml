@@ -16,13 +16,40 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc575b0e-fda7-4f09-bc1e-4e4d06908bc9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/HOC/redirectComponentHoc.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/components/Form.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/formcontrol/FormControl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/redux/homeReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/componnts/Alert.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/components/Alert.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/componnts/Form.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/componnts/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/components/Loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/componnts/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/components/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/componnts/Notes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/components/Notes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/context/firebase/FirebaseState.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/context/firebase/FirebaseState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React-Extension/ext-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../React-Extension/ext-app/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ReactJS-Repeat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ReactJS-Repeat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Login/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +68,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../React-Extension" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -60,26 +88,56 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/reactapp/src/components/Settings" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../React-Extension/ext-app/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\GitHub\React-Extension\ext-app\src" />
+      <recent name="C:\Users\User\Desktop\GitHub\React-Extension\ext-app\src\context\firebase" />
       <recent name="C:\Users\User\Desktop\GitHub\ReactJS-Repeat\reactapp\src\components\Settings" />
       <recent name="C:\Users\User\Desktop\GitHub\ReactJS-Repeat\reactapp\src\components\Friends" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.start-ext">
+    <configuration name="store.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/../React-Extension/ext-app/src/redux/store.js" working-dir="$PROJECT_DIR$/../React-Extension/ext-app/src/redux">
+      <method v="2" />
+    </configuration>
+    <configuration name="start-ext" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/../React-Extension/ext-app/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/reactapp/README.md" />
       <command value="start" />
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.store.js" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.start-ext" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.store.js" />
+        <item itemvalue="Node.js.store.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -101,7 +159,18 @@
       <workItem from="1589450217950" duration="13678000" />
       <workItem from="1589537025926" duration="25767000" />
       <workItem from="1589801852019" duration="3410000" />
-      <workItem from="1589826594143" duration="1042000" />
+      <workItem from="1589826594143" duration="2927000" />
+      <workItem from="1589971000560" duration="6182000" />
+      <workItem from="1589995855685" duration="1206000" />
+      <workItem from="1589997312324" duration="861000" />
+      <workItem from="1589998312712" duration="8446000" />
+      <workItem from="1590252926370" duration="6017000" />
+      <workItem from="1590428774891" duration="1799000" />
+      <workItem from="1590430593057" duration="106000" />
+      <workItem from="1590430717099" duration="22502000" />
+      <workItem from="1590515901416" duration="295000" />
+      <workItem from="1590516211579" duration="525000" />
+      <workItem from="1590516751421" duration="153000" />
     </task>
     <servers />
   </component>
@@ -121,34 +190,118 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588321915560">
+    <state x="1325" y="354" key="#File_Watchers" timestamp="1589998989494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588321915560" />
-    <state x="1154" y="275" key="FileChooserDialogImpl" timestamp="1589573262089">
+    <state x="1325" y="354" key="#File_Watchers/0.0.1920.1040@0.0.1920.1040" timestamp="1589998989494" />
+    <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590258617465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1154" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589573262089" />
-    <state width="801" height="276" key="GridCell.Tab.0.bottom" timestamp="1589827228331">
+    <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590258617465" />
+    <state x="1200" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590255193003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="801" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589827228331" />
-    <state width="801" height="276" key="GridCell.Tab.0.center" timestamp="1589827228331">
+    <state x="1200" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590255193003" />
+    <state x="800" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1589996174951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="801" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589827228331" />
-    <state width="801" height="276" key="GridCell.Tab.0.left" timestamp="1589827228331">
+    <state x="800" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040@0.0.1920.1040" timestamp="1589996174951" />
+    <state x="1339" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590257865930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="801" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589827228331" />
-    <state width="801" height="276" key="GridCell.Tab.0.right" timestamp="1589827228331">
+    <state x="1339" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590257865930" />
+    <state x="1123" y="100" width="704" height="847" key="DiffContextDialog" timestamp="1590435546899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="801" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589827228331" />
-    <state x="922" y="168" key="SettingsEditor" timestamp="1588699200262">
+    <state x="1123" y="100" width="704" height="847" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590435546899" />
+    <state x="1109" y="298" width="662" height="640" key="EditFileWatcherDialog" timestamp="1589998988284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588699200262" />
+    <state x="1109" y="298" width="662" height="640" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589998988284" />
+    <state x="1154" y="275" key="FileChooserDialogImpl" timestamp="1590492551176">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1154" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590492551176" />
+    <state width="843" height="271" key="GridCell.Tab.0.bottom" timestamp="1590516903956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="843" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590516903956" />
+    <state width="843" height="271" key="GridCell.Tab.0.center" timestamp="1590516903956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="843" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590516903956" />
+    <state width="843" height="271" key="GridCell.Tab.0.left" timestamp="1590516903956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="843" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590516903956" />
+    <state width="843" height="271" key="GridCell.Tab.0.right" timestamp="1590516903956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="843" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590516903956" />
+    <state width="914" height="344" key="GridCell.Tab.1.bottom" timestamp="1590515873372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873372" />
+    <state width="914" height="344" key="GridCell.Tab.1.center" timestamp="1590515873372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873372" />
+    <state width="914" height="344" key="GridCell.Tab.1.left" timestamp="1590515873372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873372" />
+    <state width="914" height="344" key="GridCell.Tab.1.right" timestamp="1590515873372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873372" />
+    <state width="914" height="344" key="GridCell.Tab.2.bottom" timestamp="1590515873373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873373" />
+    <state width="914" height="344" key="GridCell.Tab.2.center" timestamp="1590515873372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873372" />
+    <state width="914" height="344" key="GridCell.Tab.2.left" timestamp="1590515873372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873372" />
+    <state width="914" height="344" key="GridCell.Tab.2.right" timestamp="1590515873373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873373" />
+    <state width="914" height="344" key="GridCell.Tab.3.bottom" timestamp="1590515873373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873373" />
+    <state width="914" height="344" key="GridCell.Tab.3.center" timestamp="1590515873373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873373" />
+    <state width="914" height="344" key="GridCell.Tab.3.left" timestamp="1590515873373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873373" />
+    <state width="914" height="344" key="GridCell.Tab.3.right" timestamp="1590515873373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="344" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590515873373" />
+    <state x="1322" y="240" key="RollbackChangesDialog" timestamp="1589996116131">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1322" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589996116131" />
+    <state x="685" y="123" key="SettingsEditor" timestamp="1589997106553">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="123" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589997106553" />
+    <state x="1093" y="100" width="734" height="847" key="dock-window-1" timestamp="1590486149948">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1093" y="100" width="734" height="847" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1590486149948" />
+    <state x="1093" y="100" width="734" height="847" key="dock-window-2" timestamp="1590486149948">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1093" y="100" width="734" height="847" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1590486149948" />
     <state x="1156" y="136" width="585" height="801" key="find.popup" timestamp="1589048281480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -157,5 +310,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1096" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588344156376" />
+    <state x="1123" y="280" key="search.everywhere.popup" timestamp="1590485506197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1123" y="280" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590485506197" />
   </component>
 </project>

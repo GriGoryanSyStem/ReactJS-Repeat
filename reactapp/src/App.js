@@ -26,7 +26,7 @@ class App extends React.Component {
                 <HeaderContainer/>
                 <NavBar/>
                 <Switch>
-                    <Redirect from="/" to="/profile"/> внутри Switch
+                    <Redirect from="/" to="/profile"/>
                 </Switch>
                 <Route render={() => <ProfileContainer/>}
                        path="/profile/:userId?"/>
